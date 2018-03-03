@@ -10,13 +10,22 @@
       <div class="search">Поиск</div>
       <div class="bookmarks">Закладки: 0</div>
       <div class="cart">Корзина</div>
-      <div class="order">Оформить заказ</div>
+      <div class="order"><a href="order.html">Оформить заказ</a></div>
 
+      <p class="about-site">Интернет-магазин<br>
+        строительных материалов<br>
+        и инструментов для ремонта
+      </p>
+
+      <p class="phone">+7 (812) 555-05-55</p>
+      <p class="address">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
+      
+      <ul class="user-navigation">
+        <li class="login-link">Войти</li>
+        <li class="registration-link">Регистрация</li>
+      </ul>
+      
       <nav class="main-navigation">
-        <ul class="user-navigation">
-          <li class="login-link">Войти</li>
-          <li class="registration-link">Регистрация</li>
-        </ul>
         <ul class="site-navigation">
           <li><a href="main.html">Главная</a></li>
           <li><a href="company.html">Компания</a></li>
@@ -25,11 +34,81 @@
           <li><a href="special.html">Спецпредложения</a></li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="contacts.html">Контакты</a></li>
-          </ul>
+        </ul>
       </nav>
-
     </header>
 
+    <main class="container">
+      
+      <h1 class="visually-hidden">Техномарт</h1>
+
+      <!-- Наши предложения -->
+      <section class="offers">
+        <h2 class="visually-hidden">Наши предложения</h2>
+        <ul class="offers-items">
+          <li class="offer-item materials ">
+            <p>Материалы</p>
+            <img src="img/bucket.png" width="44" height="65" alt="Материалы">
+            <a class="materials-button">На любой вкус</a>
+          </li>
+          <li class="offer-item instrument">
+            <p>Инструменты</p>
+            <img src="img/drill.png" width="44" height="65" alt="Инструмент">
+            <a class="button">На все случаи</a>
+          </li>
+          <li class="offer-item vehicles">
+            <p>Техника</p>
+            <img src="tractor.png" width="44" height="65" alt="Техника">
+            <a class="button">Для стройки</a>
+          </li>
+          <li class="offer-item sales">
+            <p>Скидки 50%</p>
+            <img src="img/cart.png" width="44" height="65" alt="Скидки 50%">
+            <a class="button">На 350 товаров</a>
+          </li>
+          <li class="offer-item delivery">
+            <p>Доставка</p>
+            <img src="img/van.png" width="44" height="65" alt="Доставка">
+            <a class="button">Бесплатно</a>
+          </li>
+        </ul>
+
+        <section class="offers-slider">
+          <h2 class="visually-hidden">Горячие предложения!</h2>
+          <ul class="offers-slider-list">
+            <li class="offers-slider-item">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <figure class="slider">
+                <img class="drills" width="728" height="266" alt="Дрели. Соседям на радость!">
+                <a class="drills-catalog" href="catalog.html">Открыть каталог</a>
+              </figure>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Популярные товары -->
+      <section class="popular-products">
+        <h2>Популярные товары:</h2>
+        <a class="all-products" href="popular-products.html">Все популярные товары</a>
+        <ul class="popular-products-list">
+          <li class="popular-products-item">
+            <p>Перфоратор BOSCH<br>
+              BFG-9000
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Популярные производители -->
+      <section class="popular-manufacturers">
+        <h2>Популярные производители:</h2>
+        <a class="all-manufacturers" href="manufacturers.html">Все производители</a>
+      </section>
+
+
+    </main>
 
   </body>
 </html>
