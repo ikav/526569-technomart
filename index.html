@@ -6,10 +6,12 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="logo-header">Техномарт</div>
+      <a class="main-header-logo">
+        <img src="img/index-logo.svg" width="220" height="47" alt="Логотип компании «Техномарт»">
+      </a>
       <div class="search">Поиск</div>
-      <div class="bookmarks">Закладки: 0</div>
-      <div class="cart">Корзина</div>
+      <div class="bookmarks"><a href="bookmarks.html">Закладки: 0</a></div>
+      <div class="cart"><a href="cart.html">Корзина: 0</a></div>
       <div class="order"><a href="order.html">Оформить заказ</a></div>
 
       <p class="about-site">Интернет-магазин<br>
@@ -17,7 +19,7 @@
         и инструментов для ремонта
       </p>
 
-      <p class="header-phone">+7 (812) 555-05-55</p>
+      <div class="header-phone">+7 (812) 555-05-55</div>
       <p class="header-address">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
       
       <ul class="user-navigation">
@@ -282,7 +284,9 @@
     </main>
 
     <footer class="main-footer">
-      <div class="logo-footer">Техномарт</div>
+      <a class="main-footer-logo">
+        <img src="img/index-logo.svg" width="220" height="68" alt="Логотип компании «Техномарт»">
+      </a>
 
       <p class="address-footer">
         г. Санкт-Петербург, ул. Конюшенная, д. 19/8<br>
@@ -328,5 +332,10 @@
       </p>
     </footer>
 
+    <section class="modal modal-write-us">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <!-- Здесь будет форма -->
+      <span class="modal-close">x</span>
+    </section>
   </body>
 </html>
