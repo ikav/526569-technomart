@@ -55,7 +55,6 @@
       <section class="filters">
         <h2>Фильтр:</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-
           <fieldset>
             <legend>Цена:</legend>
             <input class="visually-hidden" id="filter-price-range" type="range" min="0" max="30000">
@@ -106,7 +105,6 @@
           </fieldset>
 
           <button class="filter-apply" type="submit" >Показать</button>
-
         </form>
       </section>
 
@@ -287,9 +285,11 @@
 
     <section class="modal modal-product-in-cart">
       <h2 class="visually-hidden">Информация</h2>
-      <p>Товар добавлен в корзину!</p>
-      <button class="modal-make-order" type="button">Оформить заказ</button>
-      <button class="modal-continue-shopping" type="button">Продолжить покупки</button>
+      <form class="product-in-cart" method="get" action="https://echo.htmlacademy.ru">
+        <p>Товар добавлен в корзину!</p>
+        <button class="cart-make-order" type="button">Оформить заказ</button>
+        <button class="cart-continue-shopping" type="button">Продолжить покупки</button>
+      </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>

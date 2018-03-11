@@ -317,33 +317,37 @@
       </p>
     </footer>
 
-    <section class="modal write-us">
+    <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <p>
-        <label class="write-us-name" for="write-us-name">Ваше имя:</label>
-        <input id="write-us-name" type="text" name="write-us-name" placeholder="Представьтесь, пожалуйста">
-      </p>
-      <p>
-        <label class="write-us-email" for="write-us-email">Ваш email:</label>
-        <input id="write-us-email" type="email" name="write-us-email" placeholder="Для отправки ответа">
-      </p>
-      <p>
-        <label for="write-us-message">Текст письма:</label>
-      </p>
-      <p>
-        <textarea name="write-us-message" id="write-us-message" cols="30" rows="10">В свободной форме</textarea>
-      </p>
-      <button class="write-us-button" type="submit">Отправить</button>
+      <form class="write-us" method="post" action="https://echo.htmlacademy.ru">
+        <p>
+          <label class="write-us-name" for="write-us-name">Ваше имя:</label>
+          <input id="write-us-name" type="text" name="write-us-name" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p>
+          <label class="write-us-email" for="write-us-email">Ваш email:</label>
+          <input id="write-us-email" type="email" name="write-us-email" placeholder="Для отправки ответа">
+        </p>
+        <p>
+          <label for="write-us-message">Текст письма:</label>
+        </p>
+        <p>
+          <textarea name="write-us-message" id="write-us-message" cols="30" rows="10">В свободной форме</textarea>
+        </p>
+        <button class="write-us-button" type="submit">Отправить</button>
+      </form>
       <button class="write-us-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-product-in-cart">
       <h2 class="visually-hidden">Информация</h2>
-      <p>Товар добавлен в корзину!</p>
-      <button class="modal-make-order" type="button">Оформить заказ</button>
-      <button class="modal-continue-shopping" type="button">Продолжить покупки</button>
+      <form class="product-in-cart" method="get" action="https://echo.htmlacademy.ru">
+        <p>Товар добавлен в корзину!</p>
+        <button class="cart-make-order" type="button">Оформить заказ</button>
+        <button class="cart-continue-shopping" type="button">Продолжить покупки</button>
+      </form>
       <button class="modal-close" type="button">Закрыть</button>
-    </section>    
+    </section>
 
   </body>
 </html>
