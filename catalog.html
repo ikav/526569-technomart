@@ -59,7 +59,14 @@
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Цена:</legend>
-            <input class="visually-hidden" id="filter-price-range" type="range" min="0" max="30000">
+            <!-- Для реализации ползунков с двух сторон -->
+            <p>Здесь будет двусторонний ползунок</p>
+            <div class="filter-price-range">
+              <span class="filter-price-min"></span><span class="filter-price-max"></span>
+            </div>
+            <!--
+              <input class="visually-hidden" id="filter-price-range" type="range" min="0" max="30000">
+            -->
             <p>
               <input class="filter-price-input" min="0" max="30000" value="0"> - 
               <input class="filter-price-input" min="0" max="30000" value="30000">
@@ -120,8 +127,6 @@
             <li class="sort-price"><a href="#">По цене</a></li>
             <li class="sort-type"><a href="#">По типу</a></li>
             <li class="sort-func"><a href="#">По функционалу</a></li>
-          </ul>
-          <ul class="sort-by-order-list">
             <li class="ascending"><a href="#">По возрастанию</a></li>
             <li class="descending"><a href="#">По убыванию</a></li>
           </ul>
