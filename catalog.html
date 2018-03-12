@@ -10,9 +10,11 @@
         <img src="img/logo-top.png" width="220" height="47" alt="Компания «Техномарт»">
       </a>
       <div class="search">Поиск</div>
-      <div class="bookmarks"><a href="bookmarks.html">Закладки: 0</a></div>
-      <div class="cart"><a href="cart.html">Корзина: 10</a></div>
-      <div class="order"><a href="order.html">Оформить заказ</a></div>
+      <ul class="user-nav">
+        <li class="bookmarks"><a href="#">Закладки: 0</a></li>
+        <li class="cart"><a href="#">Корзина: 10</a></li>
+        <li class="order"><a href="#">Оформить заказ</a></li>
+      </ul>
 
       <p class="about-site">Интернет-магазин
         строительных материалов
@@ -59,8 +61,8 @@
             <legend>Цена:</legend>
             <input class="visually-hidden" id="filter-price-range" type="range" min="0" max="30000">
             <p>
-              <label class="filter-price">0</label> - 
-              <label class="filter-price" >30000</label>
+              <input class="filter-price-input" min="0" max="30000" value="0"> - 
+              <input class="filter-price-input" min="0" max="30000" value="30000">
             </p>
           </fieldset>
 
@@ -134,8 +136,8 @@
             </p>
             <span class="old-price">22500 Р.</span>
             <span class="new-price">15500 Р.</span> 
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
           <li class="product-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
@@ -144,12 +146,12 @@
             </p>
             <span class="old-price">30500 Р.</span>
             <span class="new-price">25500 Р.</span> 
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
           <li class="popular-products-item new">
-              <button class="button button-buy" type="button">Купить</button>
-              <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <span class="new-price">12500 Р.</span> 
           </li>
@@ -160,8 +162,8 @@
             </p>
             <span class="old-price">22500 Р.</span>
             <span class="new-price">15500 Р.</span>
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
           <li class="product-item new">
             <h3>Перфоратор BOSCH BFG 6000</h3>
@@ -170,8 +172,8 @@
             </p>
             <span class="old-price">30500 Р.</span>
             <span class="new-price">25500 Р.</span>
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
           <li class="product-item">
             <h3>Перфоратор BOSCH BFG 2000</h3>
@@ -179,8 +181,8 @@
               <img src="img/product-bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
             </p>
             <span class="new-price">12500 Р.</span> 
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
           <li class="product-item new">
             <h3>Перфоратор BOSCH BFG 3000</h3>
@@ -189,8 +191,8 @@
             </p>
             <span class="old-price">22500 Р.</span>
             <span class="new-price">15500 Р.</span>
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
           <li class="product-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
@@ -199,8 +201,8 @@
             </p>
             <span class="old-price">30500 Р.</span>
             <span class="new-price">25500 Р.</span> 
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
           <li class="product-item">
             <h3>Перфоратор BOSCH BFG 2000</h3>
@@ -208,8 +210,8 @@
               <img src="img/product-bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
             </p>
             <span class="new-price">12500 Р.</span>
-            <button class="button button-buy" type="button">Купить</button>
-            <button class="button button-bookmark" type="button">В закладки</button>
+            <a class="button" href="#">Купить</a>
+            <a class="button" href="#">В закладки</a>
           </li>
         </ul>
 
@@ -287,8 +289,8 @@
       <h2 class="visually-hidden">Информация</h2>
       <form class="product-in-cart" method="get" action="https://echo.htmlacademy.ru">
         <p>Товар добавлен в корзину!</p>
-        <button class="cart-make-order" type="button">Оформить заказ</button>
-        <button class="cart-continue-shopping" type="button">Продолжить покупки</button>
+        <a class="button" href="#">Оформить заказ</a>
+        <a class="button" href="#">Продолжить покупки</a>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
