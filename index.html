@@ -3,20 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <!-- двумя строчками
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" >
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header-logo">
-        <img src="img/logo-top.png" width="220" height="47" alt="Компания «Техномарт»">
-      </a>
-      
-      <div class="search">Поиск</div>
+      <div class="user-nav">
+        <a class="main-header-logo">
+          <img src="img/logo-top.png" width="220" height="47" alt="Компания «Техномарт»">
+        </a>
 
-      <ul class="user-nav">
-        <li class="bookmarks"><a href="#">Закладки: 0</a></li>
-        <li class="cart"><a href="#">Корзина: 0</a></li>
-        <li class="order"><a href="#">Оформить заказ</a></li>
-      </ul>
+        <ul>
+          <li class="search"><a href="#">Поиск</a></li>
+          <li class="bookmarks"><a href="#">Закладки: 0</a></li>
+          <li class="cart"><a href="#">Корзина: 0</a></li>
+          <li class="order"><a href="#">Оформить заказ</a></li>
+        </ul>
+      </div>
 
       <p class="about-site">Интернет-магазин 
         строительных материалов
