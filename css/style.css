@@ -161,3 +161,174 @@ a {
 }
 
 /* Наши предложения */
+
+.offer-item,
+.offer-item .button {
+  color: #ffffff;
+}
+.offer-item .button {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.offer-item .button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.offer-item .button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.offer-item p {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.materials {
+  background-color: #ffbf47;
+}
+
+.instrument {
+  background-color: #3bbce3;
+}
+
+.vehicles {
+  background-color: #dc91d8;
+}
+
+.sales {
+  background-color: #8ed78f;
+}
+
+.delivery {
+  background-color: #ffc047;
+}
+
+/* Горячие предложения. Слайдер */
+.offers-slider-list {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.offers-slider-item,
+.offers-slider-item .catalog {
+  color: #ffffff;
+}
+
+.offers-slider-item h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.offers-slider-item p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.offers-slider-item .catalog {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+}
+
+.offers-slider-item .catalog:hover {
+  background-color: #ca2c37;
+}
+
+.offers-slider-item .catalog:active {
+  background-color: #ba2732;
+}
+
+/* Популярные товары */
+.popular-products-heading-bar {
+  background-color: #f9f5f0;
+}
+
+.popular-products-heading-bar h2 {
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.popular-products-heading-bar .catalog {
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.popular-products-heading-bar .catalog:hover {
+  background-color: #ca2c37;
+}
+
+.popular-products-heading-bar .catalog:active {
+  background-color: #ba2732;
+}
+
+.popular-products-item h3 {
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.old-price,
+.new-price {
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.old-price {
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+
+.new-price {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.button-buy,
+.button-bookmark {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.button-buy {
+  color: #ffffff;
+  background-color: #63a63e;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #367315;
+}
+
+.button-buy:hover {
+  background-color: #5fbb2d;
+}
+
+.button-buy:active {
+  background-color: #518534;
+  border-bottom-color: #518534;
+}
+
+.button-bookmark {
+  color: #32425c;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #63a63e;
+}
+
+.button-bookmark:hover {
+  border-color: #32425c;
+}
+
+.button-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+  border-color: rgba(50, 66, 92, 0.3);
+}
