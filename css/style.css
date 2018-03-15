@@ -187,29 +187,30 @@ a {
   line-height: 30px;
 }
 
-.materials {
+.offers-items .materials {
   background-color: #ffbf47;
 }
 
-.instrument {
+.offers-items .instrument {
   background-color: #3bbce3;
 }
 
-.vehicles {
+.offers-items .vehicles {
   background-color: #dc91d8;
 }
 
-.sales {
+.offers-items .sales {
   background-color: #8ed78f;
 }
 
-.delivery {
+.offers-items .delivery {
   background-color: #ffc047;
 }
 
 /* Горячие предложения. Слайдер */
 .offers-slider-list {
   background-color: rgba(0, 0, 0, 0.25);
+  list-style: none;
 }
 
 .offers-slider-item,
@@ -245,26 +246,36 @@ a {
 }
 
 /* Популярные товары */
-.popular-products-heading-bar {
+.popular-products-list {
+  list-style: none;
+}
+
+/* Заголовочная плашка в популярных товарах и популярных производителях */
+.popular-products-heading-bar,
+.popular-manufacturers-heading-bar {
   background-color: #f9f5f0;
 }
 
-.popular-products-heading-bar h2 {
+.popular-products-heading-bar h2,
+.popular-manufacturers-heading-bar h2 {
   text-transform: uppercase;
   color: #32425c;
 }
 
-.popular-products-heading-bar .catalog {
+.popular-products-heading-bar .catalog,
+.popular-manufacturers-heading-bar .all-manufacturers {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ee3643;
 }
 
-.popular-products-heading-bar .catalog:hover {
+.popular-products-heading-bar .catalog:hover,
+.popular-manufacturers-heading-bar .all-manufacturers:hover {
   background-color: #ca2c37;
 }
 
-.popular-products-heading-bar .catalog:active {
+.popular-products-heading-bar .catalog:active,
+.popular-manufacturers-heading-bar .all-manufacturers:active {
   background-color: #ba2732;
 }
 
@@ -331,4 +342,83 @@ a {
 .button-bookmark:active {
   color: rgba(50, 66, 92, 0.3);
   border-color: rgba(50, 66, 92, 0.3);
+}
+/* Популярные производители */
+.popular-manufacturers-list {
+  list-style: none;
+}
+
+.popular-manufacturers-item a {
+  border-style: solid;  
+  border-width: 1px;
+  border-color: #eaeaea;
+}
+
+/* Сервисы */
+.services {
+  background-color: #f4f8f9;
+}
+
+.services-slider-button {
+  list-style: none;
+}
+
+/* Если активный элемент списка, то фон белый */
+.services-slider-button a {
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.services-slider-button .active {
+  background-color: #ffffff;
+  color: #32425c;
+}
+
+/* Кроме активного, для всех элементом меняем цвет при наведении */
+.services-slider-button a:hover:not(.active) {
+  background-color: #293449;
+}
+
+.services-slider {
+  list-style: none;
+  background-color: #f4f8f9;
+}
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.services h3 {
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.services p {
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.services-credit {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+}
+
+.services-credit:hover {
+  background-color: #ca2c37;
+}
+
+.services-credit:active {
+  background-color: #ba2732;
 }
