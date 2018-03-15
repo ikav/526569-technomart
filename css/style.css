@@ -8,7 +8,7 @@ body {
 a {
   text-decoration: none;
 }
-
+/* Строка с логотипом и пользовательским меню*/
 .main-header {
   background-color: #f4f7f9
 }
@@ -18,7 +18,27 @@ a {
   line-height: 18px;
   color: #ffffff;
 
-  background-color: #293449;
+  background-color: #293449; 
+}
+
+.main-header-logo img {
+  padding: 13px 55px 11px 55px;
+
+  background-color: #ee3643;
+
+  border-bottom-width: 5px;
+  border-bottom-color: #b52933;
+  border-bottom-style: solid;
+}
+
+.main-header-logo img:hover {
+  background-color: #ca2c37;
+  border-bottom-color: #9a212a;
+}
+
+.main-header-logo img:active {
+  background-color: #ba2732;
+  border-bottom-color: #8e1e26;
 }
 
 .services-navigation {
@@ -51,6 +71,7 @@ a {
   color: #32425c;
 }
 
+/* Пользовательское меню */
 .user-navigation {
   list-style: none;
 }
@@ -111,6 +132,7 @@ a {
   background-color:#518534;
 }
 
+/* Основное меню навигации */
 .main-navigation {
   font-size: 17px;
   line-height: 17px;
@@ -129,3 +151,13 @@ a {
 .main-navigation-list a {
   color: #ffffff;
 }
+
+.main-navigation-list a:hover {
+  background-color: #212a3a;
+}
+
+.main-navigation-list a:active {
+  background-color: #161d29;
+}
+
+/* Наши предложения */
