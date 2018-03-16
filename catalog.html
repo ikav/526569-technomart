@@ -48,7 +48,7 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main class="container catalog-page">
 
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
@@ -56,25 +56,29 @@
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
 
-      <h1 class="page-title">Перфораторы</h1>
-      
+      <div class="catalog-page-title-bar">
+        <h1 class="catalog-page-title">Перфораторы</h1> 
+      </div>
+
       <!-- Форма фильтрации (цена, производители, источники питания) -->
       <section class="filters">
-        <h2>Фильтр:</h2>
+        <div class="catalog-page-filter-bar">
+          <h2 class="catalog-page-filter" >Фильтр:</h2>
+        </div>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Цена:</legend>
             <!-- Для реализации ползунков с двух сторон -->
-            <p>Здесь будет двусторонний ползунок</p>
             <div class="filter-price-range">
+              <p>Здесь будет двусторонний ползунок</p>
               <span class="filter-price-min"></span><span class="filter-price-max"></span>
             </div>
             <!--
               <input class="visually-hidden" id="filter-price-range" type="range" min="0" max="30000">
             -->
             <p>
-              <input class="filter-price-input" min="0" max="30000" value="0"> - 
-              <input class="filter-price-input" min="0" max="30000" value="30000">
+              <input class="filter-price-input-from" min="0" max="30000" value="0"> - 
+              <input class="filter-price-input-to" min="0" max="30000" value="30000">
             </p>
           </fieldset>
 
@@ -118,7 +122,7 @@
             </ul>
           </fieldset>
 
-          <button class="filter-apply" type="submit" >Показать</button>
+          <button class="filter-apply-button" type="submit" >Показать</button>
         </form>
       </section>
 
@@ -127,19 +131,21 @@
 
         <!-- Сортировка товаров -->
         <section class="sort">
-          <h3>Сортировка:</h3>
-          <ul class="sort-list">
-            <li class="sort-price"><a href="#">По цене</a></li>
-            <li class="sort-type"><a href="#">По типу</a></li>
-            <li class="sort-func"><a href="#">По функционалу</a></li>
-            <li class="ascending"><a href="#">По возрастанию</a></li>
-            <li class="descending"><a href="#">По убыванию</a></li>
-          </ul>
+          <div class="catalog-page-sort-bar">
+            <h3 class="catalog-page-sort">Сортировка:</h3>
+            <ul class="catalog-page-sort-list">
+              <li class="sort-price sort-active"><a href="#">По цене</a></li>
+              <li class="sort-type"><a href="#">По типу</a></li>
+              <li class="sort-func"><a href="#">По функционалу</a></li>
+              <li class="ascending"><a href="#">По возрастанию</a></li>
+              <li class="descending"><a href="#">По убыванию</a></li>
+            </ul>
+          </div>
         </section>
 
         <!-- Каталог товаров -->
-        <ul class="products-list">
-          <li class="products-item">
+        <ul class="products-list catalog-page-list">
+          <li class="product-item">
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <p>
               <img src="img/product-bosch-bfg-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -159,7 +165,7 @@
             <a class="button buy" href="#">Купить</a>
             <a class="button bookmark" href="#">В закладки</a>
           </li>
-          <li class="popular-products-item new">
+          <li class="product-item new">
             <a class="button buy" href="#">Купить</a>
             <a class="button bookmark" href="#">В закладки</a>
             <h3>Перфоратор BOSCH BFG 2000</h3>
@@ -240,9 +246,7 @@
 
         <p>
           Перфоратор - универсальный строительный инструмент. 
-          Предназначен для сверления и долбления отверсий в кирпиче, бетоне и камне.
-        </p>
-        <p>
+          Предназначен для сверления и долбления отверсий в кирпиче, бетоне и камне. 
           Существуют элетромеханические и пневматические перфораторы. Современные модели 
           могут выполнять функции дрели, шуроповерта и отбойного молотка. В ассортиментном 
           ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток 
@@ -251,58 +255,63 @@
       </section>
     </main>
 
-    <footer class="main-footer">
-      <a class="main-footer-logo" href="index.html">
-        <img src="img/logo-bottom.png" width="220" height="68" alt="Компания «Техномарт»">
-      </a>
-
-      <p class="address-footer">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
-      <p class="phone-footer">+7 (812) 555-05-55</p>
-      
-      <ul class="footer-navigation-main-list">
-        <li><a href="#">Компания</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-
-      <ul class="footer-navigation-add-list">
-        <li><a href="#">Материалы</a></li>
-        <li><a href="#">Техника</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li><a href="#">Спецпредложения</a></li>
-      </ul>
-
-      <p class="footer-copyright-technomart">
-        © 2010-2017 Компания «Техномарт» 
-        Все права защищены
-      </p>
-
-      <ul class="footer-social">
-        <li><a class="social-button" href="#">ВКонтакте</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-      </ul>
-
-      <p class="footer-callback">
-        Обратная связь: 
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a> 
-      </p>
-      <p class="footer-copyright-development">
-        Разработано -  
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-      </p>
-    </footer>
-
-    <section class="modal modal-product-in-cart">
-      <h2 class="visually-hidden">Информация</h2>
-      <form class="product-in-cart" method="get" action="https://echo.htmlacademy.ru">
-        <p>Товар добавлен в корзину!</p>
-        <a class="button" href="#">Оформить заказ</a>
-        <a class="button" href="#">Продолжить покупки</a>
-      </form>
-      <button class="modal-close" type="button">Закрыть</button>
-    </section>
+    <footer class="footer-main">
+        <div class="footer-top">
+          <a class="footer-main-logo" href="index.html">
+            <img src="img/logo-bottom.png" width="138" height="21" alt="Компания «Техномарт»">
+          </a>
+          <p class="footer-address">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
+          <p class="footer-phone">+7 (812) 555-05-55</p>
+  
+          <ul class="footer-navigation-main-list">
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+  
+          <ul class="footer-navigation-add-list">
+            <li><a href="#">Материалы</a></li>
+            <li><a href="#">Техника</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-bottom">
+          <p class="footer-copyright-technomart">
+            © 2010-2017 Компания «Техномарт»
+            Все права защищены
+          </p>
+  
+          <ul class="footer-social">
+            <li><a class="social-button" href="#">ВКонтакте</a></li>
+            <li><a class="social-button" href="#">Фейсбук</a></li>
+            <li><a class="social-button" href="#">Инстаграм</a></li>
+          </ul>
+  
+          <p class="footer-callback">
+            Обратная связь:
+            <a class="footer-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a> 
+          </p>
+          <p class="footer-copyright-dev">
+            Разработано -  
+            <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          </p>
+        </div>
+      </footer>
+  
+      <section class="modal modal-product-in-cart">
+        <h2 class="visually-hidden">Информация</h2>
+        <form class="product-in-cart" method="get" action="https://echo.htmlacademy.ru">
+          <p>Товар добавлен в корзину!</p>
+          <div class="footer-product-in-cart">
+            <a class="button product-in-cart-order" href="#">Оформить заказ</a>
+            <a class="button product-in-cart-continue-buying" href="#">Продолжить покупки</a>
+          </div>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
+      </section>
   </body>
 </html>
