@@ -8,6 +8,27 @@ body {
 a {
   text-decoration: none;
 }
+/*-----------------------------------------------------*/
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ ССЫЛОК-КНОПОК                  */
+/* Красная кнопка с белым текстом                      */
+/* При необходмости. В коде стилизуется дополнительно  */
+/*-----------------------------------------------------*/
+.button {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+}
+
+.button:hover {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
 /* Строка с логотипом и пользовательским меню*/
 .main-header {
   background-color: #f4f7f9
@@ -162,14 +183,10 @@ a {
 
 /* Наши предложения */
 
-.offer-item,
-.offer-item .button {
+.offer-item {
   color: #ffffff;
 }
 .offer-item .button {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -213,8 +230,7 @@ a {
   list-style: none;
 }
 
-.offers-slider-item,
-.offers-slider-item .catalog {
+.offers-slider-item {
   color: #ffffff;
 }
 
@@ -230,19 +246,9 @@ a {
   line-height: 24px;
 }
 
-.offers-slider-item .catalog {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  background-color: #ee3643;
-}
-
-.offers-slider-item .catalog:hover {
-  background-color: #ca2c37;
-}
-
-.offers-slider-item .catalog:active {
-  background-color: #ba2732;
+.offers-slider-item .button.catalog {
+  /*#ToDo Расположить и стилизовать кнопку "Открыть каталог"
+          в разделе "Горячие предложения"*/
 }
 
 /* Популярные товары */
@@ -262,21 +268,9 @@ a {
   color: #32425c;
 }
 
-.popular-products-heading-bar .catalog,
-.popular-manufacturers-heading-bar .all-manufacturers {
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #ee3643;
-}
-
-.popular-products-heading-bar .catalog:hover,
-.popular-manufacturers-heading-bar .all-manufacturers:hover {
-  background-color: #ca2c37;
-}
-
-.popular-products-heading-bar .catalog:active,
-.popular-manufacturers-heading-bar .all-manufacturers:active {
-  background-color: #ba2732;
+.popular-manufacturers-heading-bar .button.all-manufacturers {
+  /*#ToDo Расположить и стилизовать кнопку "Все производители" 
+          в разделе "Популярные производители"*/
 }
 
 .popular-products-item h3 {
@@ -304,42 +298,36 @@ a {
   background-color: #ee3643;
 }
 
-.button-buy,
-.button-bookmark {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
-.button-buy {
-  color: #ffffff;
+/* Переопределим стили для кнопок "Купить" и "В закладки"*/ 
+.button.buy {
   background-color: #63a63e;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: #367315;
 }
 
-.button-buy:hover {
+.button.buy:hover {
   background-color: #5fbb2d;
 }
 
-.button-buy:active {
+.button.buy:active {
   background-color: #518534;
   border-bottom-color: #518534;
 }
 
-.button-bookmark {
+.button.bookmark {
+  background-color: #ffffff;
   color: #32425c;
   border-style: solid;
   border-width: 3px;
   border-color: #63a63e;
 }
 
-.button-bookmark:hover {
+.button.bookmark:hover {
   border-color: #32425c;
 }
 
-.button-bookmark:active {
+.button.bookmark:active {
   color: rgba(50, 66, 92, 0.3);
   border-color: rgba(50, 66, 92, 0.3);
 }
@@ -407,18 +395,30 @@ a {
   color: #000000;
 }
 
-.services-credit {
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 18px;
+.services-credit .button.credit {
+  /*#ToDo Расположить и стилизовать кнопку "Отправить заявку" 
+          в разделе "Сервисы" - "Кредит"*/
+}
+
+ /* Кратко о компании */
+.about-us h2 {
+  font-size: 30px;
+  line-height:30px;
   text-transform: uppercase;
-  background-color: #ee3643;
 }
 
-.services-credit:hover {
-  background-color: #ca2c37;
+.about-us p {
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
-.services-credit:active {
-  background-color: #ba2732;
+.about-us .delivery-company {
+  /* #ToDo Добавить маркеры в соответствии с макетом */
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.about-us .button {
+  /* #ToDo Стилизовать и расположить кнопку как надо */
 }
