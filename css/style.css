@@ -535,3 +535,60 @@ a {
   text-decoration-line: none;
   color: #ee3643;
 }
+
+/* Форма обратной связи*/
+.write-us label {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.write-us input,
+.write-us textarea {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+
+  color: #999999;
+
+  border-style: solid;
+  border-color: #d7dcde;
+  border-width: 2px;
+
+  outline: 0;
+}
+
+.write-us input:hover,
+.write-us textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.write-us input:focus,
+.write-us textarea:focus {
+  border-color: #ee3643;
+}
+
+.footer-write-us {
+  background-color: #f1f1f1;
+}
+
+/* Форма с информацией о добавлении товара в корзину */
+.product-in-cart {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.product-in-cart-continue-buying {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.product-in-cart-continue-buying:hover,
+.product-in-cart-continue-buying:active {
+  /* не увидел правил как сделать наведение и клик, сделал как придумал */
+  color: #ffffff;
+}
+
+.footer-product-in-cart {
+  background-color: #f1f1f1;
+}
