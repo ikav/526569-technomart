@@ -8,3 +8,7 @@
 node_modules/
 npm-debug.*
 Thumbs.db
+css/normalize2.css
+img/logo-top_big.png
+img/logo-top_1.png
+img/logo-bottom_1.png

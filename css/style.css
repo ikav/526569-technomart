@@ -29,7 +29,7 @@ a {
   background-color: #ba2732;
 }
 
-/* Строка с логотипом и пользовательским меню*/
+/* Верхняя строка с логотипом и пользовательским меню*/
 .main-header {
   background-color: #f4f7f9
 }
@@ -421,4 +421,117 @@ a {
 
 .about-us .button {
   /* #ToDo Стилизовать и расположить кнопку как надо */
+}
+
+/* Контакты и карта */
+.contacts h2 {
+  font-size: 30px;
+  line-height:30px;
+  text-transform: uppercase;
+}
+
+.contacts p {
+  font-family: "PT Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+/* Нижняя строка с логотипом и пользовательским меню*/
+.footer-main {
+  /* Весь футер застелим фоном */
+  background-color: #32425c;
+}
+
+.footer-bottom {
+  /* Только нижнюю часть футора застелем другим фоном*/ 
+  background-color: #293449; 
+}
+
+/* Верхняя часть футера */
+.footer-top {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.footer-main-logo img {
+  padding: 21px 42px 21px 42px;
+
+  background-color: #ee3643;
+
+  border-bottom-width: 5px;
+  border-bottom-color: #b52933;
+  border-bottom-style: solid;
+}
+
+.footer-main-logo img:hover {
+  background-color: #ca2c37;
+  border-bottom-color: #9a212a;
+}
+
+.footer-main-logo img:active {
+  background-color: #ba2732;
+  border-bottom-color: #8e1e26;
+}
+
+.footer-navigation-main-list,
+.footer-navigation-add-list {
+  list-style: none;
+}
+
+.footer-navigation-main-list a {
+  color: #ffffff;
+}
+
+.footer-navigation-add-list a {
+  color: #ffd180;
+}
+
+.footer-navigation-main-list a:hover,
+.footer-navigation-add-list a:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation-main-list a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-navigation-add-list a:active {
+  color: rgba(255, 209, 128, 0.5);
+}
+
+.footer-address,
+.footer-phone {
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #ffffff;
+}
+
+/* Нижняя часть футера */
+.footer-bottom,
+.footer-bottom a {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.footer-bottom .footer-social {
+  list-style: none;
+}
+
+.footer-bottom .footer-email,
+.footer-bottom .footer-copyright {
+  color: #ffd180;
+}
+
+.footer-bottom .footer-email:hover,
+.footer-bottom .footer-copyright:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom .footer-email:active,
+.footer-bottom .footer-copyright:active {
+  text-decoration-line: none;
+  color: #ee3643;
 }
