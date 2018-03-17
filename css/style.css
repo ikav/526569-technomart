@@ -70,9 +70,31 @@ a {
   color: #ffffff;
 }
 
+.services-navigation .search-label,
+.services-navigation .search {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;  
+  background-color: #293449;
+  border: none;  
+
+  outline: 0;
+}
+
+.services-navigation .search-label:hover,
+.services-navigation .search:hover {
+  background-color: #212a3a;
+}
+
+.services-navigation .search:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 .about-site {
   font-size: 16px;
   line-height: 23px;
+  font-style: italic;
 
   color: #ee3643;
 }
