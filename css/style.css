@@ -421,7 +421,7 @@ a {
 
 .popular-products-item {
   width: 218px;
-  height: 316px;
+  height: 314px;
   margin-right: 20px;
   margin-bottom: 20px;
   border-width: 1px;
@@ -492,22 +492,56 @@ a {
   border-color: rgba(50, 66, 92, 0.3);
 }
 /* Популярные производители */
+.popular-manufacturers {
+  /* Не 65px, т.е. есть нижний маргин у каждого элемента списка */
+  margin-bottom: 45px;
+}
+
 .popular-manufacturers-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-.popular-manufacturers-item a {
+.popular-manufacturers-item {
+  width: 218px;
+  height: 143px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
   border-style: solid;  
   border-width: 1px;
   border-color: #eaeaea;
 }
 
+.popular-manufacturers-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 /* Сервисы */
-.services {
+.services-wrapper {
+  width: 100%;
+  min-height: 524px;
   background-color: #f4f8f9;
 }
 
+/*
+.services {
+  background-color: #f4f8f9;
+}
+*/
+
+.services-slider-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .services-slider-button {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -530,6 +564,8 @@ a {
 }
 
 .services-slider {
+  margin: 0;
+  padding: 0;
   list-style: none;
   background-color: #f4f8f9;
 }
@@ -558,6 +594,17 @@ a {
 .services-credit .button.credit {
   /*#ToDo Расположить и стилизовать кнопку "Отправить заявку" 
           в разделе "Сервисы" - "Кредит"*/
+}
+
+.services-slider-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.services-slider-text {
+  width: 320px;
 }
 
  /* Кратко о компании */
