@@ -28,6 +28,7 @@ a {
 .button:active {
   background-color: #ba2732;
 }
+/*-------- Конец общих стилей для кнопой ---------*/
 
 /* Верхняя строка с логотипом и пользовательским меню*/
 .main-header {
@@ -70,7 +71,7 @@ a {
   color: #ffffff;
 }
 
-.services-navigation .search-label,
+/* Стилизуем плейсхолдер для инпута */
 .services-navigation .search {
   font-size: 17px;
   line-height: 18px;
@@ -81,14 +82,46 @@ a {
   outline: 0;
 }
 
-.services-navigation .search-label:hover,
+.services-navigation .search::placeholder { 
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffffff;
+  opacity: 1; /* Firefox */
+}
+
+.services-navigation .search:-ms-input-placeholder { 
+  /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+
+.services-navigation .search::-ms-input-placeholder { 
+  /* Microsoft Edge */
+  color: #ffffff;
+}
+
 .services-navigation .search:hover {
   background-color: #212a3a;
 }
 
 .services-navigation .search:focus {
+  /* Для поля ввода */
   color: #000000;
   background-color: #ffffff;
+}
+
+.services-navigation .search:focus::placeholder  {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000000;
+  opacity: 1; /* Firefox */
+}
+
+.services-navigation .search:focus:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000000;
+}
+
+.services-navigation .search:focus::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #000000;
 }
 
 .about-site {
