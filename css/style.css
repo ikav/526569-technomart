@@ -528,19 +528,26 @@ a {
   background-color: #f4f8f9;
 }
 
+.services-breif-slogan {
+  padding-top: 67px;
+  margin-bottom: 74px;
+}
+
 /*
 .services {
-  background-color: #f4f8f9;
+  background-image: url("img/delivery-trunk.png");
 }
 */
 
 .services-slider-content {
   display: flex;
-  justify-content: space-between;
 }
 
 .services-slider-button {
-  margin: 0;
+  margin-top: 0;
+  margin-right: 80px;
+  margin-bottom: 102px;
+  margin-left: 0;
   padding: 0;
   list-style: none;
 }
@@ -567,7 +574,16 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #f4f8f9;
+}
+
+.services-slider h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.services-slider-item {
+  width: 390px;
 }
 
 .services h2 {
@@ -596,18 +612,16 @@ a {
           в разделе "Сервисы" - "Кредит"*/
 }
 
-.services-slider-item {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-}
-
-.services-slider-text {
-  width: 320px;
-}
-
  /* Кратко о компании */
+.about-our-company {
+  display: flex;
+}
+
+.about-us {
+  width: 540px;
+  margin-right: 100px;
+}
+
 .about-us h2 {
   font-size: 30px;
   line-height:30px;
@@ -631,6 +645,10 @@ a {
 }
 
 /* Контакты и карта */
+.contacts {
+  width: 310px;
+}
+
 .contacts h2 {
   font-size: 30px;
   line-height:30px;
@@ -643,8 +661,13 @@ a {
   line-height: 24px;
 }
 
+.contacts .map {
+  margin-left: 0;
+}
+
 /* Нижняя строка с логотипом и пользовательским меню*/
 .footer-main {
+  margin-top: 85px;
   /* Весь футер застелим фоном */
   background-color: #32425c;
 }
@@ -656,9 +679,15 @@ a {
 
 /* Верхняя часть футера */
 .footer-top {
+  display: flex;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.footer-navigation-lists {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-main-logo img {
@@ -683,7 +712,19 @@ a {
 
 .footer-navigation-main-list,
 .footer-navigation-add-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.footer-navigation-main-list {
+  /* Отступ от начала меню до блока логотипа с адресом */
+  margin-left:  50px;
+}
+
+.footer-navigation-add-list{
+  /* Отступ от начала меню до блока логотипа с адресом */
+  margin-left: 70px;
 }
 
 .footer-navigation-main-list a {
@@ -723,8 +764,27 @@ a {
   color: #ffffff;
 }
 
+.footer-bottom-content {
+  display: flex;
+}
+
+.footer-copyright-technomart {
+  width: 232px;
+  margin-right: 160px;
+}
+
 .footer-bottom .footer-social {
+  margin-right: 118px;
   list-style: none;
+}
+
+.footer-bottom .footer-callback {
+  width: 140px;
+  margin-right: 46px;
+}
+
+.footer-copyright-dev {
+  width: 102px;
 }
 
 .footer-bottom .footer-email,

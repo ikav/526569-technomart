@@ -220,9 +220,11 @@
       <!-- Сервисы -->
       <div class="services-wrapper">
         <section class="container services">
-          <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
-          <p>Мы стараяемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <div class="services-breif-slogan">
+            <h2>Сервисы</h2>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
+            <p>Мы стараяемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          </div>
           <div class="services-slider-content">
             <ul class="services-slider-button">
               <li><a class="delivery active" href="#">Доставка</a></li>
@@ -231,38 +233,32 @@
             </ul>
             <ul class="services-slider">
               <li class="services-slider-item">
-                <div class="services-slider-text">
-                  <h3>Доставка</h3>
-                  <p>
-                    Мы с удовольствием доставим ваш товар прямо 
-                    к вашему подъезду совершенно бесплатно! 
-                    Ведь мы неплохо заработаем 
-                    поднимая его на ваш этаж.
-                  </p>
-                </div>
-                <img src="img/trunk_big.png" width="206" height="146" alt="Доставка до подъезда бесплатно!">
+                <h3>Доставка</h3>
+                <p>
+                  Мы с удовольствием доставим ваш товар прямо 
+                  к вашему подъезду совершенно бесплатно! 
+                  Ведь мы неплохо заработаем 
+                  поднимая его на ваш этаж.
+                </p>
+                <img src="1img/delivery-trunk.png" width="206" height="146" alt="Доставка до подъезда бесплатно!">
               </li>
               <li class="services-slider-item">
-                <div class="services-slider-text">
-                  <h3>Гарантия</h3>
-                  <p>
-                    Если купленный у нас товар поломается или заискрит,
-                    а также в случае пожара, спровоцированного его возгоранием,
-                    вы всегда можете быть уверены в нашей гарантии. Мы
-                    обменяем сгоревший товар на новый.
-                  </p>
-                  <p>Дом уж восстановите как-нибудь сами.</p>
-                </div>
+                <h3>Гарантия</h3>
+                <p>
+                  Если купленный у нас товар поломается или заискрит,
+                  а также в случае пожара, спровоцированного его возгоранием,
+                  вы всегда можете быть уверены в нашей гарантии. Мы
+                  обменяем сгоревший товар на новый.
+                </p>
+                <p>Дом уж восстановите как-нибудь сами.</p>
                 <img src="img/garantee.png" width="170" height="172" alt="Гарантия обмена товара на новый">
               </li>
               <li class="services-slider-item">
-                <div class="services-slider-text">
-                  <h3>Кредит</h3>
-                  <p>
-                    Залезть в долговую яму стало проще!
-                    Кредитные консультанты придут вам на помощь.
-                  </p>
-                </div>
+                <h3>Кредит</h3>
+                <p>
+                  Залезть в долговую яму стало проще!
+                  Кредитные консультанты придут вам на помощь.
+                </p>
                 <img src="img/credit.png" width="181" height="184" alt="Скорее в долговую яму!">
                 <a class="button credit" href="#">Отправить заявку</a>
               </li>
@@ -272,7 +268,7 @@
       </div>
 
       <!-- Кратко о компании -->
-      <div class="container">
+      <div class="container about-our-company">
         <section class="about-us">
           <h2>Компания «Техномарт»</h2>
           <p>
@@ -312,30 +308,34 @@
 
     <footer class="footer-main">
       <div class="container footer-top">
-        <a class="footer-main-logo" href="index.html">
-          <img src="img/logo-bottom.png" width="138" height="21" alt="Компания «Техномарт»">
-        </a>
-        <p class="footer-address">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
-        <p class="footer-phone">+7 (812) 555-05-55</p>
+        <div class="logo-and-address">
+          <a class="footer-main-logo" href="index.html">
+            <img src="img/logo-bottom.png" width="138" height="21" alt="Компания «Техномарт»">
+          </a>
+          <p class="footer-address">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
+          <p class="footer-phone">+7 (812) 555-05-55</p>
+        </div>
 
-        <ul class="footer-navigation-main-list">
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
+        <div class="footer-navigation-lists">
+          <ul class="footer-navigation-main-list">
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
 
-        <ul class="footer-navigation-add-list">
-          <li><a href="#">Материалы</a></li>
-          <li><a href="#">Техника</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-        </ul>
+          <ul class="footer-navigation-add-list">
+            <li><a href="#">Материалы</a></li>
+            <li><a href="#">Техника</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+          </ul>
+        </div>  
       </div>
 
       <div class="footer-bottom">
-        <div class="container">
+        <div class="container footer-bottom-content">
           <p class="footer-copyright-technomart">
             © 2010-2017 Компания «Техномарт»
             Все права защищены
