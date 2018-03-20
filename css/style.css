@@ -34,7 +34,7 @@ a {
 .main-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: cente;*/
   background-color: #f4f7f9;
   margin-bottom: 60px;
 }
@@ -260,6 +260,7 @@ a {
 
 /* Основное меню навигации */
 .main-navigation {
+  min-height: 55px;
   font-size: 17px;
   line-height: 17px;
 
@@ -273,9 +274,9 @@ a {
 }
 
 .main-navigation-list {
-  list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0;  
+  list-style: none;
 }
 
 
@@ -296,12 +297,27 @@ a {
   margin-bottom: 52px;
 }
 
-.offers-items {
+.offers-items-horizontal {
   display: flex;
-  justify-content: space-between;
+  /* Возможно, следует доделать отступ справа и flex-start*/
+  justify-content: space-between; 
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.offers-slider-and-item-vertical {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.offers-items-vertical {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .offer-item {
@@ -323,35 +339,41 @@ a {
 }
 
 .offer-item p {
+  padding: 0;
+  margin: 0;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
 }
 
-.offers-items .materials {
+.offers .materials {
   background-color: #ffbf47;
 }
 
-.offers-items .instrument {
+.offers .instrument {
   background-color: #3bbce3;
 }
 
-.offers-items .vehicles {
+.offers .vehicles {
   background-color: #dc91d8;
 }
 
-.offers-items .sales {
+.offers .sales {
   background-color: #8ed78f;
 }
 
-.offers-items .delivery {
+.offers .delivery {
   background-color: #ffc047;
 }
 
 /* Горячие предложения. Слайдер */
+.offers-slider {
+  margin-right: 20px;
+}
+
 .offers-slider-list {
+  padding: 0px;  
   margin: 0px;
-  padding: 0px;
 
   list-style: none;
 }
@@ -527,7 +549,7 @@ a {
 .services-wrapper {
   width: 100%;
   min-height: 524px;
-  background-color: #f4f8f9;
+  background-color: #f4f8f9;  
 }
 
 .services-breif-slogan {
@@ -549,20 +571,32 @@ a {
 }
 
 /* Если активный элемент списка, то фон белый */
+.services-slider-button li {
+  width: 240px;
+  min-height: 62px;
+/*   font-size: 21px;
+  line-height: 30px;
+  color: #ffffff; */
+  background-color: #32425c;
+}
+
 .services-slider-button a {
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
-  background-color: #32425c;
+/*   background-color: #32425c; */
 }
 
 .services-slider-button .active {
   background-color: #ffffff;
+}
+
+.services-slider-button .active a {
   color: #32425c;
 }
 
 /* Кроме активного, для всех элементом меняем цвет при наведении */
-.services-slider-button a:hover:not(.active) {
+.services-slider-button li:hover:not(.active) {
   background-color: #293449;
 }
 
@@ -578,8 +612,29 @@ a {
   margin-bottom: 30px;
 }
 
-.services-slider-item {
+.services-slider-item{
   width: 390px;
+}
+
+.delivery-img-bg {
+  background-image: url("../img/delivery-trunk.png"),
+                    url("../img/delivery-background-for-trunk.png"); 
+
+  background-repeat: no-repeat;
+}
+
+.garantee-img-bg {
+  background-image: url("../img/garantee-medal.png"),
+                    url("../img/garantee-background-for-medal.png"); 
+
+  background-repeat: no-repeat;
+}
+
+.credit-img-bg {
+  background-image: url("../img/credit-money.png"),
+                    url("../img/credit-background-for-money.png"); 
+
+  background-repeat: no-repeat;
 }
 
 .services h2 {
