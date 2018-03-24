@@ -707,6 +707,11 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-products-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
   width: 218px;
   min-height: 314px;
   margin-right: 20px;
@@ -714,17 +719,45 @@ input[type="radio"].visually-hidden {
   border-width: 1px;
   border-style: solid;
   border-color: #eaeaea;
+  text-align: center;
+}
+
+.popular-products-item:hover {
+  box-shadow: 0 10px 50px #eaeaea;
+}
+
+.popular-products-item .flag {
+  position:absolute;
+  top:-1px;
+  right:-1px;
+  width:60px;
+  height:60px;
+  text-indent:-1000px;
+  overflow:hidden;
+   z-index:20;
+}
+.popular-products-item .flag-new {
+  background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
 .popular-products-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.popular-products-item h3 {
+.popular-products-item img {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.popular-products-item .title {
   font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+  padding: 0 30px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .old-price,
@@ -736,17 +769,59 @@ input[type="radio"].visually-hidden {
 }
 
 .old-price {
+  min-height: 18px;
   color: #a9a9a9;
   text-decoration: line-through;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .new-price {
+  position: relative;
+  width: 80px;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  padding: 10px 35px;
   color: #ffffff;
   background-color: #ee3643;
+  border-radius:3px;
+}
+
+.new-price:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 19px solid #ffffff;
+  border-left-color:#ee3643;
 }
 
 /* Переопределим стили для кнопок "Купить" и "В закладки"*/ 
-.button.buy {
+.popular-products-item .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color:#ffffff;
+  z-index: 10;
+}
+
+.action .buy,
+.action .bookmark {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    border-radius: 3px;
+}
+
+.button.buy { 
+  position: relative;
+  width: 135px;
+  padding: 10px 0;
   background-color: #63a63e;
   border-bottom-style: solid;
   border-bottom-width: 3px;
@@ -762,7 +837,29 @@ input[type="radio"].visually-hidden {
   border-bottom-color: #518534;
 }
 
+.button.buy::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.button.buy:hover::before,
+.button.buy:active::before {
+  opacity: 1;
+}
+
 .button.bookmark {
+  width: 129px;
+  padding: 8px 0;
   background-color: #ffffff;
   color: #32425c;
   border-style: solid;
@@ -778,6 +875,14 @@ input[type="radio"].visually-hidden {
   color: rgba(50, 66, 92, 0.3);
   border-color: rgba(50, 66, 92, 0.3);
 }
+
+.popular-products-item .action{
+  display:none;
+}
+.popular-products-item:hover .action{
+  display:block;
+}
+
 /* Популярные производители */
 .popular-manufacturers {
   /* Не 65px, т.е. есть нижний маргин у каждого элемента списка */
