@@ -1,8 +1,15 @@
 /* Вспомогательные стили */
 /* Для подсветки блоков */
-/* background: rgba(184, 110, 165, 0.2);
-box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
+/* 
+
+  background: rgba(184, 110, 165, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
+
+  background: rgba(54, 194, 89, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
  */
+
+
 
 
 body {
@@ -213,10 +220,14 @@ input[type="radio"].visually-hidden {
   background-color: #212a3a;
 }
 
-.services-navigation-search:focus li,
+/* здесь идет эксперимент */
 .services-navigation-search .search:focus {
   /* Для поля ввода */
   color: #000000;
+  background-color: #ffffff;
+}
+
+/* .services-navigation-search  */.search:focus~ .services-navigation-search {
   background-color: #ffffff;
 }
 
@@ -458,13 +469,21 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;  
+  
   list-style: none;
 }
 
 
 .main-navigation-list a {
+  display: block;
+  padding: 19px 30px;
+
+  vertical-align: middle;
   color: #ffffff;
 }
 
@@ -920,14 +939,26 @@ input[type="radio"].visually-hidden {
 /* Верхняя часть футера */
 .footer-top {
   display: flex;
+  margin-bottom: 52px;
+
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+
+  background: rgba(54, 194, 89, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
 }
 
 .footer-navigation-lists {
   display: flex;
   flex-direction: column;
+  margin-top: 22px; /* Отступа от верхнего край футера до меню */
+}
+
+.footer-main-logo {
+  /* Отступ до адреса */
+  display: block;
+  margin-bottom: 27px;  
 }
 
 .footer-main-logo img {
@@ -950,29 +981,43 @@ input[type="radio"].visually-hidden {
   border-bottom-color: #8e1e26;
 }
 
+.logo-and-address {
+  /* Чтобы вместился адрес и немного запаса */
+  width: 330px;
+}
+
 .footer-navigation-main-list,
 .footer-navigation-add-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
+  /* Меню занимает не всю ширину, чтобы влез адрес.
+  Ширина немного с запасом, если вдруг названия станут другими */
+  width: 610px; 
+
   list-style: none;
 }
 
-.footer-navigation-main-list {
-  /* Отступ от начала меню до блока логотипа с адресом */
-  margin-left:  50px;
-}
-
-.footer-navigation-add-list{
-  /* Отступ от начала меню до блока логотипа с адресом */
-  margin-left: 70px;
-}
-
 .footer-navigation-main-list a {
+  display: block;
+  padding: 19px 30px;
+
   color: #ffffff;
 }
 
 .footer-navigation-add-list a {
+  display: block;
+  padding: 19px 30px;
+
   color: #ffd180;
+}
+
+.footer-navigation-main-list li:last-child a,
+.footer-navigation-add-list li:last-child a {
+  /* Последний пункт меню прижать к границе без отступа */
+  padding-right: 0;
 }
 
 .footer-navigation-main-list a:hover,
@@ -990,6 +1035,9 @@ input[type="radio"].visually-hidden {
 
 .footer-address,
 .footer-phone {
+  margin: 0;
+  padding: 0;
+
   font-size: 18px;
   line-height: 24px;
 
@@ -1006,24 +1054,75 @@ input[type="radio"].visually-hidden {
 
 .footer-bottom-content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 106px;
+
+  background: rgba(184, 110, 165, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
 }
 
 .footer-copyright-technomart {
   width: 232px;
-  margin-right: 160px;
+  padding: 0;  
+  margin: 0;
+  margin-right: 150px;
+}
+
+.social-button {
+/*   display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: block;
+  width: 41px;
+  height: 41px;
+
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-color: #212a3a;
+  border-radius: 50%;
+}
+
+.social-button.vk {
+  background-image: url("../img/icon-vk.svg");
+}
+
+.social-button.fb {
+  background-image: url("../img/icon-fb.svg");
+}
+
+.social-button.insta {
+  background-image: url("../img/icon-insta.svg");
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #ee3643;
 }
 
 .footer-bottom .footer-social {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 132px;
+  padding: 0;
+  margin: 0;
   margin-right: 118px;
   list-style: none;
 }
 
 .footer-bottom .footer-callback {
+  padding: 0;
+  margin: 0;
   width: 140px;
-  margin-right: 46px;
+  margin-right: 48px;
 }
 
 .footer-copyright-dev {
+  padding: 0;
+  margin: 0;
   width: 102px;
 }
 
