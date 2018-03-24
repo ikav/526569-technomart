@@ -1,3 +1,10 @@
+/* Вспомогательные стили */
+/* Для подсветки блоков */
+/* background: rgba(184, 110, 165, 0.2);
+box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
+ */
+
+
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +15,10 @@ body {
 a {
   text-decoration: none;
 }
+/*******************************************************/
+/**************** ГЛОБАЛЬНЫЕ СТИЛИ *********************/
+/*******************************************************/
+
 /*-----------------------------------------------------*/
 /* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ ССЫЛОК-КНОПОК                  */
 /* Красная кнопка с белым текстом                      */
@@ -28,13 +39,38 @@ a {
 .button:active {
   background-color: #ba2732;
 }
-/*-------- Конец общих стилей для кнопой ---------*/
+
+/* Глобальные стили для img */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Скрытие элементов visually-hidden */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/************ КОНЕЦ голобальный стилей **************/
 
 /* Верхняя строка с логотипом, пользовательским меню и основным меню */
 .main-header {
   display: flex;
   flex-direction: column;
-  /*align-items: cente;*/
   background-color: #f4f7f9;
   margin-bottom: 60px;
 }
@@ -51,16 +87,18 @@ a {
   margin: 0;
   background-color: #293449;
   margin-bottom: 45px;
+  min-height: 42px;
 }
 
 .container {
   /* Общие свойства контейнера */
   width: 940px;
   margin: 0 auto;
-  /*padding: 0 10px;*/ /* Нужно ли? */
 }
 
 .main-header-top {
+  position: relative; /* Для позиционирования логотипа */
+
   display: flex;
   margin: 0;
   justify-content: flex-start;
@@ -71,6 +109,12 @@ a {
 }
 
 .main-header-logo img {
+  /* Верхняя строчка  с меню меньше по высоте, чем логотип */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Строим логотип*/
   padding: 13px 55px 11px 55px;
 
   background-color: #ee3643;
@@ -90,19 +134,52 @@ a {
   border-bottom-color: #8e1e26;
 }
 
-.services-navigation {
+.services-navigation,
+.services-navigation-search,
+.services-navigation-ordering {
   /* Все управляющие элементы прижаты друг к другу */
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: none;  
 }
 
-.services-navigation a {
+.services-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 720px; /* Сервисная строка меню тянется на всю оставшуюся от логотипа ширину */
+
+  margin-left: 220px; /* Ширина логотипа */
+}
+
+.services-navigation-ordering {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-navigation-ordering a {
+  display: block;
+  padding: 12px 0; /* Левые и правые отступы разные для каждой кнопки! Переназначены дальше */
+  vertical-align: middle;
   color: #ffffff;
 }
 
 /* Стилизуем плейсхолдер для инпута */
-.services-navigation .search {
+.services-navigation-search {
+  position: relative; /* Для позиционирования иконки */
+  flex-grow: 1; /* Ростет на всю ширину, оставшуюся от odering-а */
+  padding-left: 48px;
+  background: rgba(184, 110, 165, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
+}
+
+.services-navigation-search .search {
+  width: 100%;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+/*   padding-left: 48px; */
+
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;  
@@ -110,48 +187,166 @@ a {
   border: none;  
 
   outline: 0;
+
+  background: rgba(184, 110, 165, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
 }
 
-.services-navigation .search::placeholder { 
+.services-navigation-search .search::placeholder { 
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ffffff;
   opacity: 1; /* Firefox */
 }
 
-.services-navigation .search:-ms-input-placeholder { 
+.services-navigation-search:-ms-input-placeholder { 
   /* Internet Explorer 10-11 */
   color: #ffffff;
 }
 
-.services-navigation .search::-ms-input-placeholder { 
+.services-navigation-search::-ms-input-placeholder { 
   /* Microsoft Edge */
   color: #ffffff;
 }
 
-.services-navigation .search:hover {
+.services-navigation-search:hover,
+.services-navigation-search .search:hover {
   background-color: #212a3a;
 }
 
-.services-navigation .search:focus {
+.services-navigation-search:focus li,
+.services-navigation-search .search:focus {
   /* Для поля ввода */
   color: #000000;
   background-color: #ffffff;
 }
 
-.services-navigation .search:focus::placeholder  {
+.services-navigation-search .search:focus::placeholder  {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #000000;
   opacity: 1; /* Firefox */
 }
 
-.services-navigation .search:focus:-ms-input-placeholder {
+.services-navigation-search:focus:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #000000;
 }
 
-.services-navigation .search:focus::-ms-input-placeholder {
+.services-navigation-search:focus::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #000000;
+}
+
+/* Иконка для поиска */
+.services-navigation-search::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 17px;
+  height: 17px;
+
+  background-color: #ff0000;
+
+/*   background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3; */
+}
+
+/* .services-navigation-search:hover::before {
+  opacity: 1;
+}
+
+.services-navigation-search:focus::before,
+.services-navigation-search:active::before {
+  opacity: 0.5;
+} */
+
+/* Закладки */
+.services-navigation-ordering .bookmarks {
+  position: relative;
+  padding-left: 44px;
+  padding-right: 30px;
+}
+
+.services-navigation-ordering .bookmarks:hover {
+  background-color: #212a3a;
+}
+
+.services-navigation-ordering .bookmarks:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #161d29;
+}
+
+.services-navigation-ordering  .bookmarks::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.services-navigation-ordering  .bookmarks:hover::before {
+  opacity: 1;
+}
+
+.services-navigation-ordering  .bookmarks:focus::before,
+.services-navigation-ordering  .bookmarks:active::before {
+  opacity: 0.5;
+}
+
+/* Корзина */
+.services-navigation-ordering .cart {
+  position: relative;
+  padding-left: 44px;
+  padding-right: 30px;
+}
+
+.services-navigation-ordering .cart:hover {
+  background-color: #212a3a;
+}
+
+.services-navigation-ordering .cart:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #161d29;
+}
+
+.services-navigation-ordering  .cart::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.services-navigation-ordering  .cart:hover::before {
+  opacity: 1;
+}
+
+.services-navigation-ordering  .cart:focus::before,
+.services-navigation-ordering  .cart:active::before {
+  opacity: 0.5;
+}
+
+/* Оформить заказ */
+.services-navigation-ordering .order {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .main-contacts-reginfo {
@@ -228,17 +423,6 @@ a {
 .my-order:active,
 .personal-account:active {
   color: rgba(0, 0, 0, 0.30);
-}
-
-.bookmarks:hover,
-.cart:hover {
-  background-color: #212a3a;
-}
-
-.bookmarks:active,
-.cart:active {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #161d29;
 }
 
 .cart.inner-page {
