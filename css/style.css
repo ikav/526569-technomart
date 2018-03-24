@@ -1,15 +1,13 @@
 /* Вспомогательные стили */
 /* Для подсветки блоков */
 /* 
-
+  
   background: rgba(184, 110, 165, 0.2);
   box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
 
   background: rgba(54, 194, 89, 0.2);
   box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
  */
-
-
 
 
 body {
@@ -93,7 +91,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
   margin: 0;
   background-color: #293449;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
   min-height: 42px;
 }
 
@@ -227,9 +225,9 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-/* .services-navigation-search  */.search:focus~ .services-navigation-search {
+/* .services-navigation-search .search:focus~ .services-navigation-search {
   background-color: #ffffff;
-}
+} */
 
 .services-navigation-search .search:focus::placeholder  {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -363,29 +361,39 @@ input[type="radio"].visually-hidden {
 .main-contacts-reginfo {
   /* Средняя панель со слоганом, контактной информацией и регистрацией */
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-bottom: 44px;
 }
 
-.about-site {
+.main-contacts-reginfo .about-site {
   width: 200px;
+  padding: 0;
+  margin: 0;
   margin-left: 52px;
-  margin-right: 70px;
 
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
 
-  color: #ee3643;
+  color: #ee3643;  
 }
 
 .header-contacts {
-  width: 264px;
-  margin-right: 69px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
-.header-phone {
-  width: 264px;
+.header-contacts p {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.header-contacts .header-phone {
+  position: relative;
+  padding: 8px 49px 8px 70px;
   font-size: 21px;
   line-height: 21px;
 
@@ -393,22 +401,41 @@ input[type="radio"].visually-hidden {
 
   border-color: #ffffff;
   border-style: solid;
-  border-width: 2px;
+  border-width: 3px;
 }
 
-.header-address {
+.header-contacts .header-phone::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  width: 18px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+} 
+
+.header-contacts .header-address {
   width: 264px;
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
+  text-align: center;
 }
 
 /* Пользовательское меню */
 .user-navigation {
+  display: flex;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .user-navigation a {
+  display: block;
   font-size: 21px;
   line-height: 21px;
 
@@ -416,23 +443,56 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
+.user-navigation .login {
+  position: relative;
+  padding: 12px 25px 12px 48px;
+  margin-right: 10px;
+}
+
+.user-navigation .login::before {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 20px;
+  height: 17px;
+
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.user-navigation .registration {
+  padding: 12px 25px;
+}
+
 .user-navigation .my-order,
 .user-navigation .personal-account {
   font-size: 16px;
 }
 
-.login:hover,
-.registration:hover,
-.my-order:hover,
-.personal-account:hover {
+.user-navigation .login:hover,
+.user-navigation .registration:hover,
+.user-navigation .my-order:hover,
+.user-navigation .personal-account:hover {
   color: #ee3643;
 }
 
-.login:active,
-.registration:active,
-.profile:active,
-.my-order:active,
-.personal-account:active {
+.user-navigation .login:hover::before {
+  opacity: 1;
+}
+
+.user-navigation .login:active::before {
+  opacity: 0.3;
+}
+
+.user-navigation .login:active,
+.user-navigation .registration:active,
+.user-navigation .profile:active,
+.user-navigation .my-order:active,
+.user-navigation .personal-account:active {
   color: rgba(0, 0, 0, 0.30);
 }
 
