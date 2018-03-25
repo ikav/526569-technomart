@@ -612,6 +612,10 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+
+  
+  background: rgba(184, 110, 165, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
 }
 
 .offers .materials {
@@ -1144,11 +1148,16 @@ input[type="radio"].visually-hidden {
  /* Кратко о компании */
 .about-our-company {
   display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 86px;
 }
 
 .about-us {
+  padding: 0;
+  margin: 0;  
   width: 540px;
-  margin-right: 100px;
+/*   margin-right: 100px; */
 }
 
 .about-us h2 {
@@ -1177,41 +1186,79 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
 
-  /* #ToDo Добавить маркеры в соответствии с макетом */
   font-size: 18px;
   line-height: 20px;
   list-style: none;
+}
 
+.about-us .delivery-company li {
+  position: relative;
+  padding-top: 22px;
+  padding-left: 36px;
+}
+
+.about-us .delivery-company li::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 25px;
+  height: 1px;
+
+  border: 1px solid #ee3643;
+  background-color: #ee3643;
 }
 
 .about-us .button {
-  /* #ToDo Стилизовать и расположить кнопку как надо */
+  margin-top: 35px;
+  width: 220px;
+  box-sizing: border-box;
+  padding: 14px 38px;
 }
 
 /* Контакты и карта */
 .contacts {
-  width: 310px;
+  padding: 0;
+  margin: 0;
+  width: 300px;
 }
 
 .contacts h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 34px;
   font-size: 30px;
   line-height:30px;
   text-transform: uppercase;
 }
 
 .contacts p {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 37px;
+  width: 180px;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
 
 .contacts .map {
-  margin-left: 0;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  height: 158px;
+}
+
+.contacts .write-us {
+  padding: 14px 62px;
+  margin-top: 45px;
+  box-sizing: border-box;
+  width: 300px;
 }
 
 /* Нижняя строка с логотипом и пользовательским меню*/
 .footer-main {
-  margin-top: 85px;
   /* Весь футер застелим фоном */
   background-color: #32425c;
 }
