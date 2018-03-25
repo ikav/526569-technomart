@@ -30,11 +30,16 @@ a {
 /* При необходмости. В коде стилизуется дополнительно  */
 /*-----------------------------------------------------*/
 .button {
+  display: inline-block;
+  padding: 14px 45px;
+  margin-right: 15px;
+
   color: #ffffff;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   background-color: #ee3643;
+  border-radius: 3px;
 }
 
 .button:hover {
@@ -734,7 +739,7 @@ input[type="radio"].visually-hidden {
   height:60px;
   text-indent:-1000px;
   overflow:hidden;
-   z-index:20;
+  z-index:20;
 }
 .popular-products-item .flag-new {
   background: url("../img/new-flag.png") no-repeat 0 0;
@@ -885,8 +890,9 @@ input[type="radio"].visually-hidden {
 
 /* Популярные производители */
 .popular-manufacturers {
-  /* Не 65px, т.е. есть нижний маргин у каждого элемента списка */
-  margin-bottom: 45px;
+  /* 85px - 20px, т.к. есть нижний маргин 20px у каждого элемента списка 
+     паддинг, т.к. у раздела может быть фон. */
+  padding-bottom: 65px;
 }
 
 .popular-manufacturers-list {
@@ -899,6 +905,11 @@ input[type="radio"].visually-hidden {
 }
 
 .popular-manufacturers-item {
+  /* Центровка изображения */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Оформление */
   width: 218px;
   height: 143px;
   margin-right: 20px;
@@ -913,96 +924,24 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-/* Сервисы */
+.popular-manufacturers-item:hover {
+  box-shadow: 0 10px 50px #eaeaea;
+}
+
+.popular-manufacturers-item:active {
+  box-shadow: 0 5px 20px #eaeaea;
+}
+
+/* СЕРВИСЫ */
 .services-wrapper {
   width: 100%;
-  min-height: 524px;
+/*   min-height: 524px; */
   background-color: #f4f8f9;  
 }
 
-.services-breif-slogan {
-  padding-top: 67px;
-  margin-bottom: 74px;
-}
-
-.services-slider-content {
-  display: flex;
-}
-
-.services-slider-button {
-  margin-top: 0;
-  margin-right: 80px;
-  margin-bottom: 102px;
-  margin-left: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Если активный элемент списка, то фон белый */
-.services-slider-button li {
-  width: 240px;
-  min-height: 62px;
-/*   font-size: 21px;
-  line-height: 30px;
-  color: #ffffff; */
-  background-color: #32425c;
-}
-
-.services-slider-button a {
-  font-size: 21px;
-  line-height: 30px;
-  color: #ffffff;
-/*   background-color: #32425c; */
-}
-
-.services-slider-button .active {
-  background-color: #ffffff;
-}
-
-.services-slider-button .active a {
-  color: #32425c;
-}
-
-/* Кроме активного, для всех элементом меняем цвет при наведении */
-.services-slider-button li:hover:not(.active) {
-  background-color: #293449;
-}
-
-.services-slider {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.services-slider h3 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.services-slider-item{
-  width: 390px;
-}
-
-.delivery-img-bg {
-  background-image: url("../img/delivery-trunk.png"),
-                    url("../img/delivery-background-for-trunk.png"); 
-
-  background-repeat: no-repeat;
-}
-
-.garantee-img-bg {
-  background-image: url("../img/garantee-medal.png"),
-                    url("../img/garantee-background-for-medal.png"); 
-
-  background-repeat: no-repeat;
-}
-
-.credit-img-bg {
-  background-image: url("../img/credit-money.png"),
-                    url("../img/credit-background-for-money.png"); 
-
-  background-repeat: no-repeat;
+.services {
+  padding-top: 62px;
+  margin-bottom: 0;
 }
 
 .services h2 {
@@ -1026,9 +965,180 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.services-credit .button.credit {
-  /*#ToDo Расположить и стилизовать кнопку "Отправить заявку" 
-          в разделе "Сервисы" - "Кредит"*/
+.services-breif-slogan {
+  margin-bottom: 74px;
+}
+
+.services-breif-slogan h2 {
+  margin-bottom: 30px;
+}
+
+.services-breif-slogan p {
+  padding: 0;
+  margin: 0;
+}
+
+/* СЕРВИСЫ. Слайдер */
+.services-slider-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.services-slider-buttons {
+  position: relative;
+  padding: 0;
+  margin: 0;
+/*   margin-right: 80px;
+  margin-bottom: 102px; */
+  list-style: none;
+}
+.services-slider-buttons::after {
+  content: "";
+
+  position: absolute;
+  top: -45px;
+  right: 0;
+  width: 10px;
+  height: 272px;
+
+  background-image: url("../img/services-vertical-line.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* Если активный элемент списка, то фон белый */
+.services-slider-buttons li {
+  width: 240px;
+  background-color: #32425c;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #4d627b;
+  outline-offset: -1px;
+}
+
+.services-slider-buttons a {
+  display: block;
+  padding: 16px 22px;
+
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.services-slider-buttons .active {
+  background-color: #ffffff;
+  outline: none;
+}
+
+.services-slider-buttons .active a {
+  color: #32425c;
+}
+
+/* Кроме активного, для всех элементом меняем цвет при наведении */
+.services-slider-buttons li:hover:not(.active) {
+  background-color: #293449;
+}
+
+.services-slider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-slider h3 {
+  margin: 0;
+  padding: 0;
+/*   margin-bottom: 30px; */
+}
+
+.services-slider p {
+  margin: 0;
+  padding: 0;
+}
+
+.services-slider-item {
+  /* Общее для текстовой части слайдера */
+  width: 618px;
+  min-height: 286px;
+  padding: 0;
+  margin: 0;
+}
+
+.delivery-img-bg {
+  display: block;
+  background-image: 
+    url("../img/delivery-trunk.png"),
+    url("../img/delivery-background-for-trunk.png");
+  background-position: 100% 24px;
+  background-repeat: no-repeat;
+}
+
+.delivery-img-bg h3 {
+  margin-bottom: 30px;
+}
+
+.delivery-img-bg p {
+  display: block;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.garantee-img-bg {
+  display: none;
+  background-image: 
+    url("../img/garantee-medal.png"),
+    url("../img/garantee-background-for-medal.png"); 
+  background-position: 
+    100% 0px,
+    100% 12px;
+  background-repeat: no-repeat;
+}
+
+.garantee-img-bg h3 {
+  margin-bottom: 30px;
+}
+
+.garantee-img-bg p {
+  display: none;
+  width: 386px;
+  margin: 0;
+  padding: 0;
+}
+
+.credit-img-bg {
+  display: none;
+  background-image: 
+    url("../img/credit-money.png"),
+    url("../img/credit-background-for-money.png"); 
+  background-position: 
+    435px 5px,
+    150px 5px;
+  background-repeat: no-repeat;
+}
+
+.credit-img-bg h3 {
+  margin-bottom: 30px;
+}
+
+.credit-img-bg p {
+  display: block;
+  width: 386px;
+  margin: 0;
+  padding: 0;
+}
+
+.credit-img-bg .credit {
+  display: block;
+  padding: 14px 42px;  
+  margin: 0;
+  margin-top: 32px;
+
+  box-sizing: border-box;
+  width: 194px;
 }
 
  /* Кратко о компании */
@@ -1042,21 +1152,36 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 34px;
   font-size: 30px;
   line-height:30px;
   text-transform: uppercase;
 }
 
 .about-us p {
+  display: block;
+  margin: 0;
+  padding: 0;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
 
+.about-us .slogan-technomart {
+  margin-bottom: 32px;
+}
+
 .about-us .delivery-company {
+  padding: 0;
+  margin: 0;
+
   /* #ToDo Добавить маркеры в соответствии с макетом */
   font-size: 18px;
   line-height: 20px;
+  list-style: none;
+
 }
 
 .about-us .button {
@@ -1109,9 +1234,6 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-
-  background: rgba(54, 194, 89, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(54, 194, 89);
 }
 
 .footer-navigation-lists {
@@ -1223,9 +1345,6 @@ input[type="radio"].visually-hidden {
   justify-content: flex-start;
   align-items: center;
   min-height: 106px;
-
-  background: rgba(184, 110, 165, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
 }
 
 .footer-copyright-technomart {
