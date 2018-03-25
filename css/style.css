@@ -567,7 +567,6 @@ input[type="radio"].visually-hidden {
 
 .offers-items-horizontal {
   display: flex;
-  /* Возможно, следует доделать отступ справа и flex-start*/
   justify-content: space-between; 
   flex-wrap: wrap;
   margin: 0;
@@ -579,10 +578,13 @@ input[type="radio"].visually-hidden {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-bottom: 54px;
+/*   margin-bottom: 54px; */
 }
 
 .offers-items-vertical {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -595,7 +597,12 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 .offer-item .button {
+  margin-left: 24px;
+  padding: 12px 23px;
+  box-sizing: border-box;
+  width: 136px;
   background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .offer-item .button:hover {
@@ -607,15 +614,85 @@ input[type="radio"].visually-hidden {
 }
 
 .offer-item p {
+  position: relative;
   padding: 0;
-  margin: 0;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 23px;
+  margin-bottom: 14px;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+}
 
-  
-  background: rgba(184, 110, 165, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
+.offer-item.materials p::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 189px;
+  width: 44px;
+  height: 65px;
+
+  background-image: url("../img/icon-offers-bucket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.offer-item.instrument p::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 173px;
+  width: 75px;
+  height: 61px;
+
+  background-image: url("../img/icon-offers-drill.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.offer-item.vehicles p::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 169px;
+  width: 78px;
+  height: 62px;
+
+  background-image: url("../img/icon-offers-tractor.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.offer-item.sales p::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 174px;
+  width: 59px;
+  height: 72px;
+
+  background-image: url("../img/icon-offers-cart-full.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.offer-item.delivery p::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 169px;
+  width: 78px;
+  height: 63px;
+
+  background-image: url("../img/icon-offers-van.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .offers .materials {
@@ -640,6 +717,8 @@ input[type="radio"].visually-hidden {
 
 /* Горячие предложения. Слайдер */
 .offers-slider {
+  padding: 0;
+  margin: 0;
   margin-right: 20px;
 }
 
@@ -647,10 +726,17 @@ input[type="radio"].visually-hidden {
   padding: 0px;  
   margin: 0px;
 
-  list-style: none;
+  list-style: none;  
+}
+
+.offers-slider-list .slider {
+  padding: 0;
+  margin: 0;
 }
 
 .offers-slider-item {
+  padding: 0;
+  margin: 0;
   width: 620px;
   height: 266px;
   color: #ffffff;
@@ -658,6 +744,11 @@ input[type="radio"].visually-hidden {
 }
 
 .offers-slider-item h3 {
+  max-width: 300px;
+  padding: 0;
+  margin: 0;
+  margin-left: 25px;
+  padding-top: 20px;
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
@@ -665,13 +756,109 @@ input[type="radio"].visually-hidden {
 }
 
 .offers-slider-item p {
+  max-width: 300px;
+  padding: 0;
+  margin: 0;
+  margin-left: 25px;
   font-size: 18px;
   line-height: 24px;
 }
 
+.offers-slider {
+  position: relative;
+}
+
+.offers-slider-item {
+  display: none;
+}
+
+.offers-slider-item:nth-child(1) {
+  background-image: 
+  url("../img/slider-1-top-line.png"),
+  url("../img/slider-1-bosch-top-img.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.offers-slider-item:nth-child(2) {
+  display: block;
+}
+
+.offers-slider-item:nth-child(2) {
+  background-image: 
+  url("../img/slider-2-top-line.png"),
+  url("../img/slider-2-bosch-top-img.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .offers-slider-item .button.catalog {
-  /*#ToDo Расположить и стилизовать кнопку "Открыть каталог"
-          в разделе "Горячие предложения"*/
+  position: absolute;
+  top: 206px;
+  box-sizing: border-box;
+  width: 195px;
+  padding: 12px 0;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  z-index: 100;
+  
+  width: 50px;
+  height: 12px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls i {
+  position: relative;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 4px;  /* Расстояние между перключателями */
+  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls i::after {
+  content: "";
+  
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  
+  width: 12px;
+  height: 12px;
+  
+  background: #ffffff;
+  
+  border-radius: 50%;
+}
+
+.slider-controls .active::before {
+  content: "";
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  
+  width: 4px;
+  height: 4px;
+  margin: 0;
+  
+  background-color: #ee3643;
+  border: 2px solid #ee3643;
+  border-radius: 50%;
 }
 
 /* Популярные товары */
