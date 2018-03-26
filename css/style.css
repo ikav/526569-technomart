@@ -501,7 +501,7 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.30);
 }
 
-.cart.inner-page {
+.cart.cart-not-empty {
   background-color: #ee3643;
 }
 
@@ -909,7 +909,7 @@ input[type="radio"].visually-hidden {
   margin-right: 24px;
 }
 
-.popular-products-item {
+.product-item {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -925,11 +925,11 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.popular-products-item:hover {
+.product-item:hover {
   box-shadow: 0 10px 50px #eaeaea;
 }
 
-.popular-products-item .flag {
+.product-item .flag {
   position:absolute;
   top:-1px;
   right:-1px;
@@ -939,20 +939,20 @@ input[type="radio"].visually-hidden {
   overflow:hidden;
   z-index:20;
 }
-.popular-products-item .flag-new {
+.product-item .flag-new {
   background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
-.popular-products-item:nth-child(4n) {
+.popular-products-list .product-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.popular-products-item img {
+.product-item img {
   margin: 0;
   margin-top: 10px;
 }
 
-.popular-products-item .title {
+.product-item .title {
   font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -1002,7 +1002,7 @@ input[type="radio"].visually-hidden {
 }
 
 /* Переопределим стили для кнопок "Купить" и "В закладки"*/ 
-.popular-products-item .action {
+.product-item .action {
   position: absolute;
   top: 0;
   left: 0;
@@ -1079,10 +1079,10 @@ input[type="radio"].visually-hidden {
   border-color: rgba(50, 66, 92, 0.3);
 }
 
-.popular-products-item .action{
+.product-item .action{
   display:none;
 }
-.popular-products-item:hover .action{
+.product-item:hover .action{
   display:block;
 }
 
@@ -1891,7 +1891,7 @@ input[type="radio"].visually-hidden {
 }
 
 /* Каталог товаров */
-.catalog-page-list {
+.catalog-products-list {
   text-transform: none;
 }
 
@@ -1921,7 +1921,7 @@ input[type="radio"].visually-hidden {
   border-color: #eaeaea;
 }
 
-.product-item:nth-child(3n) {
+.catalog-products-list .product-item:nth-child(3n) {
   margin-right: 0;
 }
 
