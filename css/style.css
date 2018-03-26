@@ -861,6 +861,13 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
+.prev {
+  text-indent: -1000px;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 /* Популярные товары */
 
 /* Не нужно делать, т.к. есть маргин снизу для отступа следующего ряда (на случай, если будет несколько рядов) 
