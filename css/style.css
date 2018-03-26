@@ -452,16 +452,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.user-navigation-logout {
-/*   display: flex;
-  flex-direction: column; */
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.user-navigation a,
-.user-navigation-logout a {
+.user-navigation a {
   display: block;
   font-size: 21px;
   line-height: 21px;
@@ -495,9 +486,64 @@ input[type="radio"].visually-hidden {
   padding: 12px 25px;
 }
 
-.user-navigation-logout .my-order,
-.user-navigation-logout .personal-account {
+.user-navigation-logout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 300px;
+}
+
+.user-navigation-logout a {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.user-navigation-logout .profile {
+  padding: 12px 47px;
+  margin-bottom: 8px;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.user-navigation-logout .profile::before {
+  /* Иконка человечек */
+}
+
+.user-navigation-logout .profile::after {
+  /* Иконка выхода */
+}
+
+.personal-deals {
+  margin-left: 26px;
+}
+
+.personal-deals a {
   font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #32425c;
+}
+
+.personal-deals .my-order {
+  position: relative;
+  margin-right: 24px;
+}
+
+.personal-deals .my-order::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -16px;
+  width: 5px;
+  height: 5px;
+  
+  background: #32425c;
+  border-radius: 50%;
 }
 
 .user-navigation .login:hover,
@@ -894,8 +940,8 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.prev,
-.next {
+.prev-slide,
+.next-slide {
   position: absolute;
   top: 114px;
   padding: 0;
@@ -909,20 +955,20 @@ input[type="radio"].visually-hidden {
   z-index: 100;
 }
 
-.prev {
+.prev-slide {
   left: 25px;
   background-image: url("../img/icon-left.svg");
 }
 
-.next {
+.next-slide {
   right: 25px;
   background-image: url("../img/icon-right.svg");
 }
 
-.prev:hover,
-.prev.active,
-.next:hover,
-.next:active {
+.prev-slide:hover,
+.prev-slide.active,
+.next-slide:hover,
+.next-slide:active {
   background-color: transparent;
 }
 
