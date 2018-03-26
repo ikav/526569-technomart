@@ -174,28 +174,25 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-/* Стилизуем плейсхолдер для инпута */
-.services-navigation-search {
-  position: relative; /* Для позиционирования иконки */
-  flex-grow: 1; /* Ростет на всю ширину, оставшуюся от odering-а */
-  padding-left: 48px;
-
-/*   background-image: url("../img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0; */
-/*   background-position: 15px 50%; */
-/*   opacity: 0.3;  */
-
-  background: rgba(184, 110, 165, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
+/* Стилизуем поле поиска */
+.search-wrapper {
+  display: flex;
+  flex-grow: 1;
 }
 
-.services-navigation-search .search {
-  width: 100%;
+.services-navigation-search {
+  padding-left: 48px;
+  
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 50%;
+  opacity: 0.3; 
+}
 
+.search {
+  width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
-/*   padding-left: 48px; */
 
   font-size: 17px;
   line-height: 18px;
@@ -204,62 +201,71 @@ input[type="radio"].visually-hidden {
   border: none;  
 
   outline: 0;
-
-  background: rgba(184, 110, 165, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(184, 110, 165); 
 }
 
-.services-navigation-search .search::placeholder { 
+.search::placeholder { 
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #ffffff;
   opacity: 1; /* Firefox */
 }
 
-.services-navigation-search:-ms-input-placeholder { 
+.search:-ms-input-placeholder { 
   /* Internet Explorer 10-11 */
   color: #ffffff;
 }
 
-.services-navigation-search::-ms-input-placeholder { 
+.search::-ms-input-placeholder { 
   /* Microsoft Edge */
   color: #ffffff;
 }
 
 .services-navigation-search:hover,
-.services-navigation-search .search:hover {
+.search:hover {
   background-color: #212a3a;
+  opacity: 1;
 }
 
-/* здесь идет эксперимент */
-.services-navigation-search .search:focus {
+.search:focus {
   /* Для поля ввода */
   color: #000000;
   background-color: #ffffff;
+}
+
+/* .services-navigation-search:focus {
+  background-color: #ffffff;
+} */
+
+.services-navigation-search:active {
+  background-color: #ffffff;
+  background-image: url("../img/icon-search-active.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 50%;
+  opacity: 1; 
 }
 
 /* .services-navigation-search .search:focus~ .services-navigation-search {
   background-color: #ffffff;
 } */
 
-.services-navigation-search .search:focus::placeholder  {
+.search:focus::placeholder  {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #000000;
   opacity: 1; /* Firefox */
 }
 
-.services-navigation-search:focus:-ms-input-placeholder {
+.search:focus:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #000000;
 }
 
-.services-navigation-search:focus::-ms-input-placeholder {
+.search:focus::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #000000;
 }
 
 /* Иконка для поиска */
-.services-navigation-search::before {
-  content: "";
+/* .services-navigation-search::before {
+   content: "";
 
   position: absolute;
   top: 12px;
@@ -269,20 +275,20 @@ input[type="radio"].visually-hidden {
 
   background-color: #ff0000;
 
-/*   background-image: url("../img/icon-search.svg");
+  background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  opacity: 0.3; */
-}
+  opacity: 0.3; 
+} */
 
-.services-navigation-search:hover::before {
+/* .services-navigation-search:hover::before {
   opacity: 1;
 }
 
 .services-navigation-search:focus::before,
 .services-navigation-search:active::before {
   opacity: 0.5;
-}
+} */
 
 /* Закладки */
 .services-navigation-ordering .bookmarks {
