@@ -1049,8 +1049,8 @@ input[type="radio"].visually-hidden {
   right:-1px;
   width:60px;
   height:60px;
-  text-indent:-1000px;
-  overflow:hidden;
+  text-indent: -1000px;
+  overflow: hidden;
   z-index:20;
 }
 .product-item .flag-new,
@@ -1918,7 +1918,6 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-
 .catalog-columns {
   display: flex;
   justify-content: space-between;
@@ -1948,20 +1947,75 @@ input[type="radio"].visually-hidden {
   line-height: 30px;
   color: #32425c;
 }
-
-/* Фильтр */
+/**************/
+/*   ФИЛЬТРЫ  */
+/**************/
 .filters {
   width: 220px;
 }
 
 .catalog-page-filter-bar,
-.catalog-page-sort-bar,
+.catalog-sort-bar,
 .filter-price-range,
 .filter-price-input-from,
 .filter-price-input-to {
   padding: 0;
   margin: 0;
   background-color: #f7f3ec;
+}
+
+.catalog-page-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-height: 38px;
+  align-items: center;
+}
+
+.catalog-sort-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-height: 38px;
+  align-items: center;
+/* 
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82); */
+}
+
+.catalog-sort-bar h3 {
+  margin-right: 140px;
+/* 
+  background: rgba(216, 95, 14, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(216, 95, 14); */
+}
+
+.catalog-sort-list-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.catalog-sort-list-category .sort-price {
+  margin-right: 70px;
+
+/*   background: rgba(216, 95, 14, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(216, 95, 14); */
+}
+
+.catalog-sort-list-category .sort-type {
+  margin-right: 65px;
+
+/*   background: rgba(216, 95, 14, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(216, 95, 14); */
+}
+
+.catalog-sort-list-category .sort-func {
+  margin-right: 47px;
+/* 
+  background: rgba(216, 95, 14, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(216, 95, 14); */
 }
 
 .filter-price-input-from,
@@ -1973,7 +2027,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-page-filter,
-.catalog-page-sort {
+.catalog-sort-header {
   padding: 0;
   padding-left: 19px;
   margin: 0;
@@ -1982,29 +2036,114 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
 }
 
-.catalog-page-sort-list {
+.catalog-sort-list-category {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.catalog-page-sort-list a {
+.catalog-sort-list-category a,
+.catalog-sort-list-order a {
   font-size: 13px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+}
 
+.catalog-sort-list-category a {
+  /*.catalog-sort-list-order a - не нужно, так как будет фоновая картинка */
   border-bottom-style: dotted; 
   border-bottom-width: 1px;
   border-bottom-color: #ee3643; 
 }
 
-.catalog-page-sort-list a:hover {
+.catalog-sort-list-category a:hover {
   color: #000000;
 
   border-bottom-style: solid; 
   border-bottom-width: 1px;
   border-bottom-color: #ee3643; 
 }
+
+/* .catalog-sort-list-category a:hover {
+
+
+  border-bottom-style: solid; 
+  border-bottom-width: 1px;
+  border-bottom-color: #ee3643; 
+} */
+
+.catalog-sort-list-order {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 44px;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.catalog-sort-list-order li {
+  position: relative;
+}
+
+/* .catalog-sort-list-order .ascending,
+.catalog-sort-list-order .descending */
+
+.ascending,
+.descending {
+  position: absolute;
+  top: -4px;
+  padding: 0;
+  margin: 0;
+  width: 11px;
+  height: 10px;
+  text-indent: -5000px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+/*   background-color: transparent;
+  z-index: 110; */
+  border-style: none;
+}
+
+.ascending {
+  left: 0;
+  background-image: url("../img/icon-dir-up.svg");
+  opacity: 0.3;
+}
+
+.ascending:hover {
+  background-image: url("../img/icon-dir-up.svg");
+  opacity: 1;
+}
+
+.ascending.active {
+  background-image: url("../img/icon-dir-up-active.svg");
+  opacity: 1;  
+}
+
+.descending {
+  right: 0;
+  background-image: url("../img/icon-dir-down.svg");
+  opacity: 0.3;
+}
+
+.descending:hover {
+  background-image: url("../img/icon-dir-down.svg");
+  opacity: 1;
+}
+
+.descending.active {
+  background-image: url("../img/icon-dir-down-active.svg");
+  opacity: 1;
+}
+/* 
+
+.prev-slide {
+  left: 25px;
+  background-image: url("../img/icon-left.svg");
+} */
 
 .catalog .sort {
   padding: 0;
