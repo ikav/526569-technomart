@@ -87,24 +87,21 @@
             </div>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset>
-                <legend>Цена:</legend>
+                <legend class="filter-legend-price">Цена:</legend>
                 <!-- Для реализации ползунков с двух сторон -->
-                <div class="filter-price-range">
+                <div class="filter-price-toggle">
                   <p>Здесь будет двусторонний ползунок</p>
-                  <span class="filter-price-min"></span><span class="filter-price-max"></span>
+                  <span class="filter-price-toggle-min"></span><span class="filter-price-toggle-max"></span>
                 </div>
-                <!--
-                  <input class="visually-hidden" id="filter-price-range" type="range" min="0" max="30000">
-                -->
-                <p>
+                <div class="filter-price-range">
                   <input class="filter-price-input-from" type="number" min="0" max="30000" value="0"> - 
                   <input class="filter-price-input-to" type="number" min="0" max="30000" value="30000">
-                </p>
+                </div>
               </fieldset>
 
               <fieldset>
-                <legend>Производители:</legend>
-                <ul>
+                <legend class="filter-legend-manufacturers">Производители:</legend>
+                <ul class="filter-list-manufacturers">
                   <li class="filter-option">
                     <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-bosch" id="filter-bosch" checked>
                     <label for="filter-bosch">Bosch</label>
@@ -129,13 +126,13 @@
               </fieldset>
 
               <fieldset class="filter-bottom">
-                <legend>Питание:</legend>
-                <ul>
-                  <li>
+                <legend class="filter-legend-power-supply">Питание:</legend>
+                <ul class="filter-list-power-supply">
+                  <li class="filter-option">
                     <input class="visually-hidden filter-input filter-input-radio" type="radio" name="filter-power-supply" id="filter-accumulator" checked>
                     <label for="filter-accumulator">Аккумуляторные</label>
                   </li>
-                  <li>
+                  <li class="filter-option">
                     <input class="visually-hidden filter-input filter-input-radio" type="radio" name="filter-power-supply" id="filter-electrical-network">
                     <label for="filter-electrical-network">Сетевые</label>
                   </li>
