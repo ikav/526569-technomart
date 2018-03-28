@@ -1245,7 +1245,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-breif-slogan {
-  margin-bottom: 66px;
+  margin-bottom: 68px;
 }
 
 .services-breif-slogan h2 {
@@ -1286,7 +1286,6 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-/* Если активный элемент списка, то фон белый */
 .services-slider-buttons li {
   width: 240px;
   background-color: #32425c;
@@ -1298,13 +1297,14 @@ input[type="radio"].visually-hidden {
 
 .services-slider-buttons a {
   display: block;
-  padding: 16px 22px;
+  margin: 0;
+  padding: 14px 22px 18px 22px;
 
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
 }
-
+/* Если активный элемент списка, то фон белый */
 .services-slider-buttons .active {
   background-color: #ffffff;
   outline: none;
@@ -1325,23 +1325,21 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.services-slider h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.services-slider p {
-  margin: 0;
-  padding: 0;
-}
-
 .services-slider-item {
   /* Общее для текстовой части слайдера */
-  width: 618px;
+  width: 620px;
   min-height: 286px;
   padding: 0;
   margin: 0;
 }
+
+.services-slider-item h3,
+.services-slider-item p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 
 .delivery-img-bg {
   display: block;
@@ -1359,8 +1357,8 @@ input[type="radio"].visually-hidden {
 .delivery-img-bg p {
   display: block;
   width: 300px;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .garantee-img-bg {
@@ -1421,7 +1419,7 @@ input[type="radio"].visually-hidden {
 .about-our-company {
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 78px;
   padding-bottom: 86px;
 }
 
@@ -1429,13 +1427,12 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;  
   width: 540px;
-/*   margin-right: 100px; */
 }
 
 .about-us h2 {
   margin: 0;
   padding: 0;
-  margin-bottom: 34px;
+  margin-bottom: 26px;
   font-size: 30px;
   line-height:30px;
   text-transform: uppercase;
@@ -1451,7 +1448,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us .slogan-technomart {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .about-us .delivery-company {
@@ -1465,7 +1462,7 @@ input[type="radio"].visually-hidden {
 
 .about-us .delivery-company li {
   position: relative;
-  padding-top: 22px;
+  padding-top: 20px;
   padding-left: 36px;
 }
 
@@ -1475,17 +1472,17 @@ input[type="radio"].visually-hidden {
   top: 30px;
   left: 0px;
   width: 25px;
-  height: 1px;
+  height: 2px;
 
-  border: 1px solid #ee3643;
   background-color: #ee3643;
 }
 
 .about-us .button {
-  margin-top: 35px;
+  margin-top: 37px;
   width: 220px;
   box-sizing: border-box;
-  padding: 14px 38px;
+  padding: 10px 0;
+  text-align: center;
 }
 
 /* Контакты и карта */
@@ -1498,7 +1495,7 @@ input[type="radio"].visually-hidden {
 .contacts h2 {
   padding: 0;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 26px;
   font-size: 30px;
   line-height:30px;
   text-transform: uppercase;
@@ -1508,7 +1505,7 @@ input[type="radio"].visually-hidden {
   display: block;
   padding: 0;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 32px;
   width: 180px;
   font-family: "PT Sans", Helvetica, sans-serif;
   font-size: 13px;
@@ -1523,10 +1520,11 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts .write-us {
-  padding: 14px 62px;
-  margin-top: 45px;
+  padding: 10px 0;
+  margin-top: 39px;
   box-sizing: border-box;
   width: 300px;
+  text-align: center;
 }
 
 /* Нижняя строка с логотипом и пользовательским меню*/
@@ -1568,7 +1566,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-main-logo img {
-  padding: 21px 42px 21px 42px;
+  padding: 21px 40px 21px 42px;
 
   background-color: #ee3643;
 
