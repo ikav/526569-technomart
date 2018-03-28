@@ -81,9 +81,9 @@ input[type="radio"].visually-hidden {
   /* margin-bottom: 60px; */
 }
 /* Для страницы каталога переопределим нижный отступ */
-.header-catalog-page {
+/* .header-catalog-page {
   margin-bottom: 24px;
-}
+} */
 
 .main-header-top-wrapper {
   /* Тянущаяся обертка на всю ширину */
@@ -1852,7 +1852,8 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 13px;
   line-height: 18px;
   list-style: none;
@@ -1869,6 +1870,8 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs li {
   position: relative;
+  padding: 0;
+  margin: 0;
   margin-right: 38px;
 }
 
@@ -1890,34 +1893,14 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-
-/* .prev-slide,
-.next-slide {
-  position: absolute;
-  top: 115px;
-  padding: 0;
-  margin: 0;
-  width: 22px;
-  height: 40px;
-  text-indent: -1000px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color: transparent;
-  z-index: 100;
+.breadcrumbs li:first-child {
+  /* Отступ от пустой первой лишки до следующей хлебной крошки*/
+  margin-right: 54px;
 }
 
-.prev-slide {
-  left: 25px;
-  background-image: url("../img/icon-left.svg");
-} */
-
-
-
-/* .breadcrumbs li:first-child {
-  text-indent: -1000px;
-} */
-.breadcrumbs li:first-child {
-  margin-right: 38px;
+.breadcrumbs li:first-child::before {
+  /* Перемещаем стрелочку от первой пустой лишки до следующей хлебной крошики */
+  right: -36px;
 }
 
 .breadcrumbs li:first-child a {
@@ -1925,7 +1908,7 @@ input[type="radio"].visually-hidden {
 
   position: absolute;
   top: 2px;
-  left: 0px;
+  left: -2px;
   width: 14px;
   height: 12px;
   text-indent: -1000px;
@@ -1943,11 +1926,20 @@ input[type="radio"].visually-hidden {
 
 /* Заголовок страницы */
 .catalog-page-title-bar {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 19px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 89px;
+  align-items: center;
+  margin-bottom: 20px;
   background-color: #f2f6f8;
 }
+
+.catalog-page-title-bar h1 {
+  padding: 0;
+  margin: 0;
+  margin-left: 28px;
+}
+
 .catalog-page-title {
   padding: 0;
   margin: 0;
