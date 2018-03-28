@@ -1556,13 +1556,13 @@ input[type="radio"].visually-hidden {
 .footer-navigation-lists {
   display: flex;
   flex-direction: column;
-  margin-top: 22px; /* Отступа от верхнего край футера до меню */
+  margin-top: 18px; /* Отступа от верхнего край футера до меню */
 }
 
 .footer-main-logo {
   /* Отступ до адреса */
   display: block;
-  margin-bottom: 27px;  
+  margin-bottom: 21px;  
 }
 
 .footer-main-logo img {
@@ -1595,8 +1595,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  padding: 0;  
   margin: 0;
-  padding: 0;
   /* Меню занимает не всю ширину, чтобы влез адрес.
   Ширина немного с запасом, если вдруг названия станут другими */
   width: 610px; 
@@ -1606,14 +1606,13 @@ input[type="radio"].visually-hidden {
 
 .footer-navigation-main-list a {
   display: block;
-  padding: 19px 30px;
-
+  padding: 19px 30px 19px 29px;
   color: #ffffff;
 }
 
 .footer-navigation-add-list a {
   display: block;
-  padding: 19px 30px;
+  padding: 15px 31px 15px 28px;
 
   color: #ffd180;
 }
@@ -1639,8 +1638,9 @@ input[type="radio"].visually-hidden {
 
 .footer-address,
 .footer-phone {
+  padding: 0; 
+  padding-left: 2px;
   margin: 0;
-  padding: 0;
 
   font-size: 18px;
   line-height: 24px;
@@ -1661,14 +1661,14 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  min-height: 106px;
+  min-height: 104px;
 }
 
 .footer-copyright-technomart {
   width: 232px;
   padding: 0;  
   margin: 0;
-  margin-right: 150px;
+  margin-right: 158px;
 }
 
 .social-button {
