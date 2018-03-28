@@ -2155,9 +2155,56 @@ input[type="radio"].visually-hidden {
 
 /* Двсторонний ползунок */
 .filter-price-toggle {
-  height: 80px;
-
+  position: relative;
+  height: 40px;
   margin-bottom: 10px;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+
+.filter-price-toggle .scale {
+  /* Полная шкала */
+
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.filter-price-toggle .bar {
+  /* Шкала выделенного (внутри шкалы) */
+  width: 80%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-toggle {
+  /* Ползунки */
+  position: absolute;
+  top: 30px;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 19px;
+}
+
+.range-toggle-max {
+  left: 160px;
 }
 
 .filter-price-input-from,
