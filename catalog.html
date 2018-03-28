@@ -20,7 +20,6 @@
                 <label class="services-navigation-search" for="search"></label>
                 <input class="search" id="search" type="text" name="search" placeholder="Поиск:">
               </div>
-              </ul>
               <ul class="services-navigation-ordering">
                 <li><a class="bookmarks" href="#">Закладки: 0</a></li>
                 <li><a class="cart cart-not-empty" href="#">Корзина: 10</a></li>
@@ -31,24 +30,20 @@
         </div>
 
       <div class="container main-contacts-reginfo">
-        <p class="about-site">Интернет-магазин 
-          строительных материалов
-          и инструментов для ремонта
-        </p>
+        <div class="main-contacts-wrapper">
+          <p class="about-site">Интернет-магазин 
+            строительных материалов<br>
+            и инструментов для ремонта
+          </p>
 
-        <div class="header-contacts">
-          <p class="header-phone">+7 (812) 555-05-55</p>
-          <p class="header-address">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
+          <div class="header-contacts">
+            <p class="header-phone">+7 (812) 555-05-55</p>
+            <p class="header-address">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
+          </div>
         </div>
 
-<!--         <ul class="user-navigation-logout">
-          <li><a class="profile" href="profile.html">Равшат Джамшутович</a></li>
-          <li><a class="my-order" href="my_orders.html">Мои заказы</a></li>
-          <li><a class="personal-account" href="my_personal_account.html">Личный кабинет</a></li>
-        </ul> -->
-
         <div class="user-navigation-logout">
-          <a class="profile" href="profile.html">Равшат Джамшутович</a>
+          <a class="profile" href="profile.html">Равшан Джамшутович</a>
           <div class="personal-deals">
             <a class="my-order" href="my_orders.html">Мои заказы</a>
             <a class="personal-account" href="my_personal_account.html">Личный кабинет</a>
@@ -74,7 +69,8 @@
       
       <div class="container">
         <ul class="breadcrumbs">
-          <li><a href="index.html">Главная</a></li>
+          <li><a class="go-to-home" href="index.html">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
           <li><a href="#">Инструмент</a></li>
           <li class="breadcrumbs-current">Перфораторы</li>
         </ul>
@@ -101,8 +97,8 @@
                   <input class="visually-hidden" id="filter-price-range" type="range" min="0" max="30000">
                 -->
                 <p>
-                  <input class="filter-price-input-from" min="0" max="30000" value="0"> - 
-                  <input class="filter-price-input-to" min="0" max="30000" value="30000">
+                  <input class="filter-price-input-from" type="number" min="0" max="30000" value="0"> - 
+                  <input class="filter-price-input-to" type="number" min="0" max="30000" value="30000">
                 </p>
               </fieldset>
 

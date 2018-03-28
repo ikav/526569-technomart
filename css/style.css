@@ -330,12 +330,19 @@ input[type="radio"].visually-hidden {
   padding-bottom: 40px;
 }
 
+.main-contacts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .main-contacts-reginfo .about-site {
   width: 200px;
   padding: 0;
   padding-top: 3px;
   margin: 0;
   margin-left: 52px;
+  margin-right: 70px;
 
   font-size: 16px;
   line-height: 23px;
@@ -454,6 +461,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation-logout .profile {
+  position: relative;
   padding: 12px 47px;
   margin-bottom: 8px;
   font-size: 21px;
@@ -463,15 +471,53 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation-logout .profile::before {
-  /* Иконка человечек */
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  width: 20px;
+  height: 18px;
+
+  background-image: url("../img/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.user-navigation-logout .profile:hover::before {
+  opacity: 1;
+}
+
+.user-navigation-logout .profile:active::before {
+  opacity: 0.3;
 }
 
 .user-navigation-logout .profile::after {
-  /* Иконка выхода */
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 20px;
+  height: 17px;
+
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.user-navigation-logout .profile:hover::after {
+  opacity: 1;
+}
+
+.user-navigation-logout .profile:active::after {
+  opacity: 0.3;
 }
 
 .personal-deals {
-  margin-left: 26px;
+  margin-left: 19px;
 }
 
 .personal-deals a {
@@ -483,16 +529,16 @@ input[type="radio"].visually-hidden {
 
 .personal-deals .my-order {
   position: relative;
-  margin-right: 24px;
+  margin-right: 28px;
 }
 
 .personal-deals .my-order::before {
   content: "";
   position: absolute;
-  top: 8px;
-  right: -16px;
-  width: 5px;
-  height: 5px;
+  top: 7px;
+  right: -19px;
+  width: 4px;
+  height: 4px;
   
   background: #32425c;
   border-radius: 50%;
@@ -522,6 +568,8 @@ input[type="radio"].visually-hidden {
 }
 
 .cart.cart-not-empty {
+  padding-left: 50px;
+  padding-right: 25px;
   background-color: #ee3643;
 }
 
@@ -1799,6 +1847,9 @@ input[type="radio"].visually-hidden {
 }
 /* Хлебные крошки */
 .breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-bottom: 24px;
@@ -1815,6 +1866,75 @@ input[type="radio"].visually-hidden {
 .breadcrumbs a:focus {
   text-decoration: underline;
 }
+
+.breadcrumbs li {
+  position: relative;
+  margin-right: 38px;
+}
+
+.breadcrumbs li:not(.breadcrumbs-current)::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  right: -24px;
+  width: 7px;
+  height: 12px;
+
+  background-image: url("../img/icon-breadcrumbs.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+
+/* .prev-slide,
+.next-slide {
+  position: absolute;
+  top: 115px;
+  padding: 0;
+  margin: 0;
+  width: 22px;
+  height: 40px;
+  text-indent: -1000px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: transparent;
+  z-index: 100;
+}
+
+.prev-slide {
+  left: 25px;
+  background-image: url("../img/icon-left.svg");
+} */
+
+
+
+/* .breadcrumbs li:first-child {
+  text-indent: -1000px;
+} */
+.breadcrumbs li:first-child {
+  margin-right: 38px;
+}
+
+.breadcrumbs li:first-child a {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 14px;
+  height: 12px;
+  text-indent: -1000px;
+
+  background-image: url("../img/icon-home.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 
 .catalog-columns {
   display: flex;
