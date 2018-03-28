@@ -2346,7 +2346,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
   list-style: none;
   font-size: 13px;
   line-height: 18px;
@@ -2371,7 +2371,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 10px 0;
   text-align: center;
-/*   vertical-align: middle; */
   color: #000000;
   border-style: solid;
   border-width: 1px;
@@ -2399,24 +2398,27 @@ input[type="radio"].visually-hidden {
 /* Кратко об инструментах (перфораторах) */
 .breif-about-instruments-wrapper {
   width: 100%;
-  min-height: 263px;
+  min-height: 261px;
   background-color: #f4f8f9;
 }
 
 .breif-about-instruments {
-  padding-top: 66px;
+  padding-top: 65px;
   padding-bottom: 40px;
 }
 
 .breif-about-instruments h2 {
   padding: 0;
   margin: 0;
+  margin-bottom: 26px;
   font-family: "Cuprum", Arial, Helvetica, sans-serif;
   font-size: 30px;
   line-height: 30px;
 }
 
 .breif-about-instruments p {
+  padding: 0;
+  margin: 0;
   font-size: 13px;
   line-height: 24px;
   text-transform: none;
