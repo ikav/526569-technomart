@@ -381,25 +381,29 @@
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us" method="post" action="https://echo.htmlacademy.ru">
-        <p>
-          <label class="write-us-name" for="write-us-name">Ваше имя:</label>
-          <input id="write-us-name" type="text" name="write-us-name" placeholder="Представьтесь, пожалуйста">
-        </p>
-        <p>
-          <label class="write-us-email" for="write-us-email">Ваш email:</label>
-          <input id="write-us-email" type="email" name="write-us-email" placeholder="Для отправки ответа">
-        </p>
-        <p>
-          <label for="write-us-message">Текст письма:</label>
-        </p>
-        <p>
-          <textarea name="write-us-message" id="write-us-message" cols="30" rows="10">В свободной форме</textarea>
-        </p>
-        <div class="footer-write-us">
-          <button class="button write-us-button" type="submit">Отправить</button>
+        <div class="modal-container">
+          <div class="write-us-list-inputs">
+            <div class="write-us-field name">
+              <label class="write-us-name" for="write-us-name">Ваше имя:</label>
+              <input id="write-us-name" type="text" name="write-us-name" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="write-us-field email">
+              <label class="write-us-email" for="write-us-email">Ваш email:</label>
+              <input  id="write-us-email" type="email" name="write-us-email" placeholder="Для отправки ответа">
+            </div>
+          </div>
+          <div class="write-us-message">
+            <label for="write-us-message">Текст письма:</label>
+            <textarea class="write-us-letter" name="write-us-message" id="write-us-message" cols="30" rows="10">В свободной форме</textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="modal-container">
+            <button class="button write-us-button" type="submit">Отправить</button>
+          </div>
         </div>
       </form>
-      <button class="write-us-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-product-in-cart">
