@@ -2568,11 +2568,11 @@ input[type="radio"].visually-hidden {
 
 /* Форма добавления товара в корзину */
 .modal-product-in-cart {
-  display: none;
+/*   display: none; */
   top: 120px;
   left: 50%;
   width: 620px;
-  height: 282px; /* Если будет много контента, то может вылезти за экран и кнопку на нажать будет! */
+  min-height: 282px; /* Если будет много контента, то может вылезти за экран и кнопку на нажать будет! */
   margin-left: -310px;
 
   box-sizing: border-box;
@@ -2619,18 +2619,12 @@ input[type="radio"].visually-hidden {
 }
 
 /* Форма "Напишите нам" */
-.modal-write-us p,
-.modal-write-us label, 
-.modal-write-us input {
-  margin: 0;
-  padding: 0;
-}
-
 .modal-write-us {
+  display: none;
   top: 120px;
   left: 50%;
   width: 620px;
-  height: 430px; /* Если будет много контента, то может вылезти за экран и кнопку на нажать будет! */
+  min-height: 430px; /* Если будет много контента, то может вылезти за экран и кнопку на нажать будет! */
   margin-left: -310px;
 
   box-sizing: border-box;
@@ -2639,6 +2633,13 @@ input[type="radio"].visually-hidden {
   border-top-color: #ee3643;
   box-shadow: 0 10px 50px #8f95a0/* #eaeaea*/;
   z-index: 1000;
+}
+
+.modal-write-us p,
+.modal-write-us label, 
+.modal-write-us input {
+  margin: 0;
+  padding: 0;
 }
 
 .modal-write-us .button {
@@ -2691,5 +2692,19 @@ input[type="radio"].visually-hidden {
   margin-bottom: 10px;
 }
 
-
 /* Форма "Большая карта" */
+.modal-map {
+  display: none;
+  top: 120px;
+  left: 50%;
+  width: 940px;
+  height: 446px;
+  margin-left: -470px;
+
+  box-shadow: 0 0 30px #8f95a0/* #eaeaea*/;
+  z-index: 1000;
+}
+
+.modal-map p {
+  margin: 0;
+}
