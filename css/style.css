@@ -2209,21 +2209,50 @@ input[type="radio"].visually-hidden {
 
 .filter-price-input-from,
 .filter-price-input-to {
+  position: absolute;
   width: 95px;
   height: 38px;
   padding: 0;
   margin: 0;
 
+  font-size: 17px;
+  line-height: 18px;
+
   text-align: center;
   border: none;  
 }
 
+.filter-price-input-from {
+  left: 0;
+}
+
+.filter-price-input-to {
+  right: 0;
+}
+
 .filter-price-range {
+  position: relative;
+
+  min-height: 63px;
+  font-size: 0;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #e5e5e5; 
-  padding-bottom: 25px;
 }
+
+.filter-price-range::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 50%;
+
+  width: 9px;
+  height: 1px;
+
+  background: #000000;
+  transform: translate(-50%, -50%);
+}
+
 
 .filter-option label {
   position: relative;
