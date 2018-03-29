@@ -2260,7 +2260,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input:disabled + label{
-  color: rgba(0, 0, 0, 0.4)
+  /* color: rgba(0, 0, 0, 0.4); */
+  opacity: 0.3;
 }
 
 .filter-input-radio + label::before {
@@ -2568,7 +2569,7 @@ input[type="radio"].visually-hidden {
 
 /* Форма добавления товара в корзину */
 .modal-product-in-cart {
-/*   display: none; */
+  display: none;
   top: 120px;
   left: 50%;
   width: 620px;
