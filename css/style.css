@@ -2260,7 +2260,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input:disabled + label{
-  /* color: rgba(0, 0, 0, 0.4); */
   opacity: 0.3;
 }
 
