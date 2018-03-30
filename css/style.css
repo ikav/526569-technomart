@@ -2277,6 +2277,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.5;
 }
 
 .filter-input-radio:checked + label::after {
@@ -2293,6 +2294,17 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.5;
+}
+
+.filter-input-radio:hover:not(:disabled) + label::after,
+.filter-input-radio:focus + label::after {
+  opacity: 1;
+}
+
+.filter-input-radio:hover:not(:disabled) + label::before,
+.filter-input-radio:focus + label::before {
+  opacity: 1;
 }
 
 .filter-input-checkbox + label::before {
@@ -2308,6 +2320,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.5;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -2324,6 +2337,17 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.5;
+}
+
+.filter-input-checkbox:hover:not(:disabled) + label::before,
+.filter-input-checkbox:focus + label::before {
+  opacity: 1;
+}
+
+.filter-input-checkbox:hover:not(:disabled) + label::after,
+.filter-input-checkbox:focus + label::after{
+  opacity: 1;
 }
 
 .filter-option {
