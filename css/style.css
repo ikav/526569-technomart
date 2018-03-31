@@ -88,10 +88,6 @@ input[type="radio"].visually-hidden {
   /* margin-bottom: 60px; */
 }
 /* Для страницы каталога переопределим нижный отступ */
-/* .header-catalog-page {
-  margin-bottom: 24px;
-} */
-
 .main-header-top-wrapper {
   /* Тянущаяся обертка на всю ширину */
   display: -webkit-box;
@@ -2866,7 +2862,7 @@ input[type="radio"].visually-hidden {
   top: 120px;
   left: 50%;
   width: 620px;
-  min-height: 282px; /* Если будет много контента, то может вылезти за экран и кнопку на нажать будет! */
+  min-height: 282px;
   margin-left: -310px;
 
   -webkit-box-sizing: border-box;
@@ -2875,8 +2871,8 @@ input[type="radio"].visually-hidden {
   border-top-style: solid;
   border-top-width: 7px;
   border-top-color: #ee3643;
-  -webkit-box-shadow: 0 10px 50px #8f95a0/* #eaeaea*/;
-          box-shadow: 0 10px 50px #8f95a0/* #eaeaea*/;
+  -webkit-box-shadow: 0 10px 50px #8f95a0;
+          box-shadow: 0 10px 50px #8f95a0;
   z-index: 1000;
 }
 
@@ -2926,7 +2922,7 @@ input[type="radio"].visually-hidden {
   top: 120px;
   left: 50%;
   width: 620px;
-  min-height: 430px; /* Если будет много контента, то может вылезти за экран и кнопку на нажать будет! */
+  min-height: 430px; 
   margin-left: -310px;
 
   -webkit-box-sizing: border-box;
@@ -2935,8 +2931,8 @@ input[type="radio"].visually-hidden {
   border-top-style: solid;
   border-top-width: 7px;
   border-top-color: #ee3643;
-  -webkit-box-shadow: 0 10px 50px #8f95a0/* #eaeaea*/;
-          box-shadow: 0 10px 50px #8f95a0/* #eaeaea*/;
+  -webkit-box-shadow: 0 10px 50px #8f95a0;
+          box-shadow: 0 10px 50px #8f95a0;
   z-index: 1000;
 }
 
@@ -2994,12 +2990,25 @@ input[type="radio"].visually-hidden {
 
 .write-us-message textarea {
   padding-top: 7px;
-  padding-left: 15px;
+/*   padding-left: 15px; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 460px;
   height: 114px;
   border-radius: 3px;
+}
+
+.write-us-message textarea::-webkit-input-placeholder {
+  padding-left: 15px;
+}
+.write-us-message textarea:-ms-input-placeholder {
+  padding-left: 15px;
+}
+.write-us-message textarea::-ms-input-placeholder {
+  padding-left: 15px;
+}
+.write-us-message textarea::placeholder {
+  padding-left: 15px;
 }
 
 .write-us-list-inputs {
@@ -3028,9 +3037,9 @@ input[type="radio"].visually-hidden {
   height: 446px;
   margin-left: -470px;
 
-  -webkit-box-shadow: 0 0 30px #8f95a0/* #eaeaea*/;
+  -webkit-box-shadow: 0 0 30px #8f95a0;
 
-          box-shadow: 0 0 30px #8f95a0/* #eaeaea*/;
+          box-shadow: 0 0 30px #8f95a0;
   z-index: 1000;
 }
 
