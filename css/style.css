@@ -1015,7 +1015,7 @@ input[type="radio"].visually-hidden {
   width: 10px;
   height: 10px;
   padding: 5px;  /* Расстояние между перключателями */
-  
+  vertical-align: top;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -1350,7 +1350,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.popular-manufacturers-item {
+.popular-manufacturers-link {
   /* Центровка изображения */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1362,28 +1362,32 @@ input[type="radio"].visually-hidden {
       -ms-flex-align: center;
           align-items: center;
   /* Оформление */
-  width: 218px;
-  height: 143px;
+  box-sizing: border-box;
+  width: 220px;
+  height: 144px;
+  padding: 0;
+  margin: 0;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   border-style: solid;  
   border-width: 1px;
   border-color: #eaeaea;
 }
 
-.popular-manufacturers-item:nth-child(4n) {
+.popular-manufacturers-item:nth-child(4n) .popular-manufacturers-link {
   margin-right: 0;
 }
 
-.popular-manufacturers-item:hover {
+.popular-manufacturers-link:hover {
   -webkit-box-shadow: 0 10px 50px #eaeaea;
           box-shadow: 0 10px 50px #eaeaea;
 }
 
-.popular-manufacturers-item:active {
+.popular-manufacturers-link:active {
   -webkit-box-shadow: 0 5px 20px #eaeaea;
           box-shadow: 0 5px 20px #eaeaea;
+  opacity: 0.3;
 }
 
 /* СЕРВИСЫ */
