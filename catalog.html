@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт. Каталог интрумента</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" >
+    <link href="css/style.min.css" rel="stylesheet" >
   </head>
   <body>
     <header class="main-header header-catalog-page">
@@ -43,7 +43,10 @@
         </div>
 
         <div class="user-navigation-logout">
-          <a class="profile" href="profile.html">Равшан Джамшутович</a>
+          <div class="profile-manage">
+            <a class="profile" href="profile.html">Равшан Джамшутович</a>
+            <a class="deactivate" href="deactivate.html">Выход</a>
+          </div>
           <div class="personal-deals">
             <a class="my-order" href="my_orders.html">Мои заказы</a>
             <a class="personal-account" href="my_personal_account.html">Личный кабинет</a>
@@ -358,5 +361,8 @@
           </div>
         </div>
       </footer>
+
+      <script type="text/javascript" src="js/popup.min.js"></script>
+      
   </body>
 </html>

@@ -541,11 +541,15 @@ input[type="radio"].visually-hidden {
 .user-navigation-logout a {
   margin: 0;
   padding: 0;
-  
 }
 
-.user-navigation-logout .profile {
+.user-navigation-logout .profile-manage {
   position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;  
+  
   padding: 12px 47px;
   margin-bottom: 8px;
   font-size: 21px;
@@ -554,7 +558,11 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.user-navigation-logout .profile::before {
+.profile-manage .profile {
+  color: #000000;
+}
+
+.profile-manage .profile::before {
   content: "";
 
   position: absolute;
@@ -569,15 +577,15 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.user-navigation-logout .profile:hover::before {
+.profile-manage .profile:hover::before {
   opacity: 1;
 }
 
-.user-navigation-logout .profile:active::before {
+.profile-manage .profile:active::before {
   opacity: 0.3;
 }
 
-.user-navigation-logout .profile::after {
+.profile-manage .deactivate {
   content: "";
 
   position: absolute;
@@ -585,18 +593,18 @@ input[type="radio"].visually-hidden {
   right: 10px;
   width: 20px;
   height: 17px;
-
+  text-indent: -5000px;
   background-image: url("../img/icon-logout.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
 }
 
-.user-navigation-logout .profile:hover::after {
+.profile-manage .deactivate:hover {
   opacity: 1;
 }
 
-.user-navigation-logout .profile:active::after {
+.profile-manage .deactivate:active {
   opacity: 0.3;
 }
 
@@ -646,6 +654,7 @@ input[type="radio"].visually-hidden {
 .user-navigation .login:active,
 .user-navigation .registration:active,
 .user-navigation-logout .profile:active,
+.user-navigation-logout .deactivate:active,
 .user-navigation-logout .my-order:active,
 .user-navigation-logout .personal-account:active {
   color: rgba(0, 0, 0, 0.30);

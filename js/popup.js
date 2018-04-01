@@ -6,8 +6,6 @@
       var isStorageSupport = true; 
       var storage = "";
 
-/*       var closeWriteUs = document.querySelector(".modal-close"); */
-
       /***************** Конец общих переменных ******************/
 
       /*==========================*/
@@ -134,7 +132,7 @@
       });
       /* Продолжаем покупки (заглушка. только убираем окно) */
       cartContinueBuying.addEventListener("click", function(evt) {        
-        /* При реализации функционала не забыть evt.preventDefault(); */
+        evt.preventDefault();
         cartPopup.classList.remove("modal-show");
       });
 
